@@ -176,7 +176,7 @@ function submitSimulacao(e) {
   document.getElementById('sim-step-sucesso').classList.add('active');
   // Open WhatsApp after short delay
   setTimeout(() => {
-    window.open(`https://wa.me/5500000000000?text=${msg}`, '_blank');
+    window.open(`https://wa.me/5583999025887?text=${msg}`, '_blank');
   }, 600);
 }
 
@@ -188,7 +188,7 @@ function submitWhatsapp(e) {
   const msg = encodeURIComponent(
     `Olá Gabriel! Quero saber mais sobre ${interesse}.\n\nNome: ${nome}\nTelefone: ${telefone}`
   );
-  window.open(`https://wa.me/5500000000000?text=${msg}`, '_blank');
+  window.open(`https://wa.me/5583999025887?text=${msg}`, '_blank');
 }
 
 // ---- SMOOTH SCROLL (links de âncora) ----
