@@ -1236,6 +1236,112 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================================
+   PRODUCT CARD FEATURED (Contempladas)
+   ============================================================ */
+.product-card-featured {
+  border-color: rgba(201,165,88,.35);
+  background: linear-gradient(160deg, var(--white) 0%, rgba(245,240,232,.5) 100%);
+  position: relative;
+}
+.product-card-featured:hover { border-color: var(--gold); }
+.product-card-badge {
+  position: absolute;
+  top: -1px;
+  right: 20px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  padding: 4px 10px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+.product-icon-gold { background: rgba(201,165,88,.12); color: var(--gold-dark); }
+
+/* ============================================================
+   INSTAGRAM SECTION
+   ============================================================ */
+.instagram-section {
+  padding: 80px 0;
+  background: var(--navy-deep);
+}
+.instagram-inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: center;
+}
+.instagram-text h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.instagram-text p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+.instagram-cta {
+  display: inline-flex;
+  align-items: center;
+}
+
+.instagram-handle {
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+.instagram-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.instagram-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.instagram-info strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+}
+.instagram-info span {
+  font-size: 12px;
+  color: rgba(255,255,255,.45);
+  line-height: 1.4;
+}
+.instagram-stats {
+  display: flex;
+  gap: 24px;
+}
+.ig-stat { display: flex; flex-direction: column; align-items: center; }
+.ig-stat-num { font-size: 22px; font-weight: 800; color: var(--gold); }
+.ig-stat-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+
+@media (max-width: 900px) {
+  .instagram-inner { grid-template-columns: 1fr; gap: 36px; }
+  .instagram-handle { max-width: 340px; }
+}
+
+/* ============================================================
    FLOAT WHATSAPP
    ============================================================ */
 .float-whatsapp {
