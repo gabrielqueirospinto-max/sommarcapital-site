@@ -135,6 +135,66 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .btn-ghost:hover { border-color: rgba(255,255,255,.7); color: var(--white); }
 
+/* ---- Inline gold highlight (brand signature from Instagram) ---- */
+.hl {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* ---- Comparison banner ---- */
+.comparison-banner {
+  background: var(--navy-deep);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 36px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.comparison-item {
+  text-align: center;
+  padding: 0 36px;
+}
+.comparison-item:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+.comparison-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 6px;
+}
+.comparison-value {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1;
+}
+.comparison-value.good { color: var(--gold); }
+.comparison-value.bad  { color: rgba(255,255,255,.35); text-decoration: line-through; }
+.comparison-vs {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,.25);
+  padding: 0 12px;
+  letter-spacing: .12em;
+}
+.comparison-caption {
+  font-size: 12px;
+  color: rgba(255,255,255,.4);
+  margin-top: 4px;
+}
+@media (max-width: 600px) {
+  .comparison-banner { gap: 20px; padding: 24px 20px; }
+  .comparison-item { padding: 0 20px; }
+  .comparison-value { font-size: 22px; }
+}
+
 /* ---- Typography helpers ---- */
 .eyebrow {
   display: block;
@@ -951,6 +1011,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--offwhite);
   border-color: rgba(201,165,88,.3);
 }
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
 .testimonial-avatar {
   width: 44px;
   height: 44px;
@@ -1578,10 +1645,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .sim-options { grid-template-columns: 1fr; }
 }
 
+/* ============================================================
+   SCROLL REVEAL (progressive enhancement)
+   Elements only hide once JS marks <html> as reveal-ready, so
+   content stays visible if JS is disabled or fails to load.
+   ============================================================ */
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
   }
+  /* Never hide content for users who prefer reduced motion */
+  .reveal-ready .reveal { opacity: 1 !important; transform: none !important; }
 }
