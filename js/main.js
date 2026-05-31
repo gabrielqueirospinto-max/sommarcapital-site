@@ -14,6 +14,7 @@
   let current = 0;
   const total = document.querySelectorAll('.hero-slide').length;
   let timer;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function goTo(idx) {
     current = (idx + total) % total;
@@ -26,7 +27,17 @@
 
   function startAuto() {
     clearInterval(timer);
+    if (reduceMotion) return; // respeita preferência de movimento reduzido
     timer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  // Pausa o autoplay quando o usuário está interagindo com o hero
+  const heroEl = document.querySelector('.hero');
+  if (heroEl) {
+    heroEl.addEventListener('mouseenter', () => clearInterval(timer));
+    heroEl.addEventListener('mouseleave', startAuto);
+    heroEl.addEventListener('focusin', () => clearInterval(timer));
+    heroEl.addEventListener('focusout', startAuto);
   }
 
   prev.addEventListener('click', () => { goTo(current - 1); startAuto(); });
@@ -222,4 +233,30 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   }, { rootMargin: '-40% 0px -55% 0px' });
 
   sections.forEach(s => observer.observe(s));
+})();
+
+// ---- SCROLL REVEAL (entrada suave das seções) ----
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  const selector = '.section-title, .product-card, .benefit-card, .testimonial-card, ' +
+    '.blog-card, .need-card, .cg-text, .cg-card, .about-text, .about-stats, ' +
+    '.cta-banner-inner, .instagram-inner';
+  const els = document.querySelectorAll(selector);
+  if (!els.length) return;
+
+  document.documentElement.classList.add('reveal-ready');
+  els.forEach(el => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+
+  els.forEach(el => io.observe(el));
 })();
