@@ -1,1109 +1,369 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sommar Capital — Especialistas em Cartas Contempladas, Consórcio e Planejamento Financeiro. Estratégias inteligentes para aquisição de patrimônio. Corretora autorizada Magalu.">
-  <meta property="og:title" content="Sommar Capital | Consórcios &amp; Investimentos">
-  <meta property="og:description" content="Estratégias inteligentes para aquisição de patrimônio. Especialistas em Cartas Contempladas, consórcio de imóveis, automóveis e capital de giro empresarial.">
-  <meta property="og:type" content="website">
-  <title>Sommar Capital | Consórcio Inteligente</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
-    <div class="container">
-      <div class="header-inner">
-
-        <a href="/" class="logo" aria-label="Sommar Capital — Início">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 40" width="168" height="40">
-            <defs>
-              <pattern id="hg-h" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="4" stroke="#C9A558" stroke-width="1.2"/>
-              </pattern>
-              <clipPath id="vc-h">
-                <path d="M 18 5.5 A 12.5 12.5 0 0 1 18 28.5 A 12.5 12.5 0 0 1 18 5.5 Z"/>
-              </clipPath>
-            </defs>
-            <circle cx="12" cy="17" r="12.5" fill="none" stroke="#C9A558" stroke-width="1.4"/>
-            <circle cx="24" cy="17" r="12.5" fill="none" stroke="#C9A558" stroke-width="1.4"/>
-            <rect x="0" y="0" width="36" height="36" fill="url(#hg-h)" clip-path="url(#vc-h)"/>
-            <text x="44" y="14" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" letter-spacing="3.5" fill="#C9A558">SOMMAR</text>
-            <text x="44" y="28" font-family="Montserrat,sans-serif" font-size="10" font-weight="400" letter-spacing="3.5" fill="#C9A558">CAPITAL</text>
-          </svg>
-        </a>
-
-        <nav class="nav" id="nav" aria-label="Navegação principal">
-          <ul class="nav-list">
-            <li><a href="#inicio" class="nav-link">Início</a></li>
-            <li class="has-dropdown">
-              <a href="#produtos" class="nav-link">Produtos <span class="chevron">▾</span></a>
-              <ul class="dropdown">
-                <li><a href="#automoveis">Automóveis</a></li>
-                <li><a href="#imoveis">Imóveis</a></li>
-                <li><a href="#investimento">Investimento</a></li>
-                <li><a href="#contempladas">Contempladas</a></li>
-                <li><a href="#capital-giro">Capital de Giro</a></li>
-              </ul>
-            </li>
-            <li><a href="#sobre" class="nav-link">Sobre nós</a></li>
-            <li><a href="blog/" class="nav-link">Blog</a></li>
-            <li><a href="#contato" class="nav-link">Contato</a></li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <button class="btn-outline" onclick="openModal('modal-whatsapp')">WhatsApp</button>
-          <button class="btn-gold" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-        </div>
-
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="inicio" aria-label="Destaque principal">
-    <div class="hero-track" id="hero-track">
-
-      <div class="hero-slide" data-index="0">
-        <div class="hero-bg hero-bg-1"></div>
-        <div class="container">
-          <div class="hero-content">
-            <span class="hero-tag">Consórcio de veículos</span>
-            <h1>Comprar um<br>carro novo?</h1>
-            <p>Sem juros. Sem entrada obrigatória.<br>Meia parcela até a contemplação.</p>
-            <div class="hero-btns">
-              <button class="btn-gold btn-lg" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-              <a href="#produtos" class="btn-ghost">Ver produtos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-slide" data-index="1">
-        <div class="hero-bg hero-bg-2"></div>
-        <div class="container">
-          <div class="hero-content">
-            <span class="hero-tag">Consórcio de imóveis</span>
-            <h1>Sair do<br>aluguel?</h1>
-            <p>Do apartamento próprio ao imóvel comercial.<br>Sem juros, com uso de FGTS como lance.</p>
-            <div class="hero-btns">
-              <button class="btn-gold btn-lg" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-              <a href="#imoveis" class="btn-ghost">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-slide" data-index="2">
-        <div class="hero-bg hero-bg-3"></div>
-        <div class="container">
-          <div class="hero-content">
-            <span class="hero-tag">Estratégia patrimonial</span>
-            <h1>Alavancar<br>seu patrimônio?</h1>
-            <p>Consórcio como instrumento de investimento:<br>previsível, auditável e sem risco de mercado.</p>
-            <div class="hero-btns">
-              <button class="btn-gold btn-lg" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-              <a href="#investimento" class="btn-ghost">Saiba mais</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <button class="hero-arrow hero-prev" id="hero-prev" aria-label="Slide anterior">&#8592;</button>
-    <button class="hero-arrow hero-next" id="hero-next" aria-label="Próximo slide">&#8594;</button>
-
-    <div class="hero-dots" role="tablist" aria-label="Slides do hero">
-      <button class="hero-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-      <button class="hero-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-      <button class="hero-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-    </div>
-  </section>
-
-  <!-- ========== DO QUE VOCÊ PRECISA ========== -->
-  <section class="needs" id="produtos">
-    <div class="container">
-      <p class="section-eyebrow">DO QUE VOCÊ PRECISA AGORA?</p>
-      <div class="needs-grid">
-        <a href="#automoveis" class="need-card">
-          <div class="need-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 28h32M10 28l3-8h22l3 8M14 34a2 2 0 100-4 2 2 0 000 4zM34 34a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 28H8a2 2 0 00-2 2v2a2 2 0 002 2h2M38 28h2a2 2 0 012 2v2a2 2 0 01-2 2h-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <span>Comprar um carro novo!</span>
-          <span class="need-arrow">→</span>
-        </a>
-        <a href="#imoveis" class="need-card">
-          <div class="need-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 22L24 8l18 14v20a2 2 0 01-2 2H8a2 2 0 01-2-2V22z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M18 40V28h12v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <span>Sair do aluguel!</span>
-          <span class="need-arrow">→</span>
-        </a>
-        <a href="#investimento" class="need-card">
-          <div class="need-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 36l10-12 8 6 10-14 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="6" cy="36" r="2" fill="currentColor"/>
-              <circle cx="42" cy="24" r="2" fill="currentColor"/>
-            </svg>
-          </div>
-          <span>Alavancar meu patrimônio!</span>
-          <span class="need-arrow">→</span>
-        </a>
-        <a href="#capital-giro" class="need-card need-card-accent">
-          <div class="need-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="14" width="36" height="26" rx="2" stroke="currentColor" stroke-width="2"/>
-              <path d="M14 14V10a2 2 0 012-2h16a2 2 0 012 2v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M24 24v6M21 27h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <span>Crédito para minha empresa!</span>
-          <span class="need-arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PRODUCTS GRID ========== -->
-  <section class="products-section" id="produto-cards">
-    <div class="container">
-      <span class="eyebrow">SOLUÇÕES SOMMAR CAPITAL</span>
-      <h2 class="section-title">Escolha o consórcio<br>certo para você</h2>
-      <div class="products-grid">
-
-        <div class="product-card" id="automoveis">
-          <div class="product-card-header">
-            <div class="product-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 24h28M8 24l2.5-7h19l2.5 7M12 30a2 2 0 100-4 2 2 0 000 4zM28 30a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Consórcio de automóveis</h3>
-          </div>
-          <p>Carros, motos e elétricos — novos ou semi-novos. O caminho mais inteligente para trocar de veículo.</p>
-          <ul class="product-features">
-            <li>Crédito a partir de R$ 34.000</li>
-            <li>Até 140 mensalidades</li>
-            <li>Meia parcela até contemplação</li>
-            <li>Sem juros — só taxa administrativa</li>
-          </ul>
-          <button class="btn-gold btn-full" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-        </div>
-
-        <div class="product-card" id="imoveis">
-          <div class="product-card-header">
-            <div class="product-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 18L20 7l15 11v17a2 2 0 01-2 2H7a2 2 0 01-2-2V18z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M15 34V24h10v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Consórcio de imóveis</h3>
-          </div>
-          <p>Apartamento, casa, terreno, imóvel comercial ou reforma — sem juros e com possibilidade de usar FGTS.</p>
-          <ul class="product-features">
-            <li>Crédito a partir de R$ 80.000</li>
-            <li>Até 220 mensalidades</li>
-            <li>FGTS como lance (residencial)</li>
-            <li>Sem juros — só taxa administrativa</li>
-          </ul>
-          <button class="btn-gold btn-full" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-        </div>
-
-        <div class="product-card" id="investimento">
-          <div class="product-card-header">
-            <div class="product-icon">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 30l8-10 7 5 8-12 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="5" cy="30" r="1.5" fill="currentColor"/>
-                <circle cx="35" cy="20" r="1.5" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>Consórcio para investimentos</h3>
-          </div>
-          <p>Grupos personalizados, cotas exclusivas e estratégias de contemplação acelerada para quem quer multiplicar patrimônio.</p>
-          <ul class="product-features">
-            <li>Crédito a partir de R$ 80.000</li>
-            <li>Grupos e cotas exclusivos</li>
-            <li>Estratégia de lance embutido</li>
-            <li>Consultoria de estratégia inclusa</li>
-          </ul>
-          <button class="btn-gold btn-full" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-        </div>
-
-        <div class="product-card product-card-featured" id="contempladas">
-          <div class="product-card-badge">ESPECIALIDADE</div>
-          <div class="product-card-header">
-            <div class="product-icon product-icon-gold">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M13 20l5 5 9-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3>Cartas contempladas</h3>
-          </div>
-          <p>Crédito imediato — sem esperar contemplação. Para quem precisa do recurso agora mas quer fugir dos juros do financiamento.</p>
-          <ul class="product-features">
-            <li>Crédito disponível em 5–15 dias úteis</li>
-            <li>Imóvel ou automóvel</li>
-            <li>De R$ 50.000 a R$ 2.000.000+</li>
-            <li>Taxa de cessão + taxa administrativa</li>
-          </ul>
-          <a href="#contato" class="btn-outline-navy btn-full">Ver contempladas</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PRODUCT DETAIL TABS ========== -->
-  <section class="tabs-section">
-    <div class="container">
-      <span class="eyebrow">DETALHES DOS PLANOS</span>
-      <h2 class="section-title">Consórcio sob medida<br>para cada objetivo</h2>
-      <div class="tabs-wrapper">
-        <div class="tabs-nav" role="tablist">
-          <button class="tab-btn active" data-tab="tab-veiculos" role="tab" aria-selected="true">Veículos</button>
-          <button class="tab-btn" data-tab="tab-imoveis" role="tab" aria-selected="false">Imóveis</button>
-          <button class="tab-btn" data-tab="tab-investimento" role="tab" aria-selected="false">Investimento</button>
-          <button class="tab-btn" data-tab="tab-pesados" role="tab" aria-selected="false">Pesados</button>
-          <button class="tab-btn tab-btn-gold" data-tab="tab-capital-giro" role="tab" aria-selected="false">Capital de Giro ✦</button>
-        </div>
-
-        <div class="tab-panels">
-
-          <div class="tab-panel active" id="tab-veiculos" role="tabpanel">
-            <div class="tab-content">
-              <div class="tab-text">
-                <span class="tab-eyebrow">CONSÓRCIO DE VEÍCULOS</span>
-                <h3>Para você comprar carros ou motos, novos ou semi-novos.</h3>
-                <p>Sem juros, sem entrada obrigatória. Você paga meia parcela até ser contemplado — depois o valor ajusta para a parcela cheia, com amortização de 50% do saldo devedor.</p>
-                <ul class="tab-list">
-                  <li><span class="check">✓</span> Crédito a partir de R$ 34.000</li>
-                  <li><span class="check">✓</span> Até 140 mensalidades</li>
-                  <li><span class="check">✓</span> Meia parcela até contemplação</li>
-                  <li><span class="check">✓</span> Carros, motos, elétricos</li>
-                  <li><span class="check">✓</span> Novos e semi-novos</li>
-                  <li><span class="check">✓</span> Menor taxa administrativa do mercado</li>
-                </ul>
-                <button class="btn-gold" onclick="openModal('modal-simulacao')">Fale com um consultor</button>
-              </div>
-              <div class="tab-highlight">
-                <div class="highlight-card">
-                  <div class="highlight-num">R$ 34K</div>
-                  <div class="highlight-label">crédito mínimo</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">140x</div>
-                  <div class="highlight-label">mensalidades</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">0%</div>
-                  <div class="highlight-label">de juros</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="tab-imoveis" role="tabpanel">
-            <div class="tab-content">
-              <div class="tab-text">
-                <span class="tab-eyebrow">CONSÓRCIO DE IMÓVEIS</span>
-                <h3>Apartamento, casa, terreno, imóvel comercial ou reforma.</h3>
-                <p>O produto mais flexível do mercado imobiliário. Use FGTS como lance para ser contemplado mais rápido, ou aguarde o sorteio sem pagar juros em nenhum momento.</p>
-                <ul class="tab-list">
-                  <li><span class="check">✓</span> Crédito a partir de R$ 80.000</li>
-                  <li><span class="check">✓</span> Até 220 mensalidades</li>
-                  <li><span class="check">✓</span> FGTS como lance (residencial)</li>
-                  <li><span class="check">✓</span> Meia parcela até contemplação</li>
-                  <li><span class="check">✓</span> Terreno, construção, reforma</li>
-                  <li><span class="check">✓</span> Imóvel comercial e galpão</li>
-                </ul>
-                <button class="btn-gold" onclick="openModal('modal-simulacao')">Fale com um consultor</button>
-              </div>
-              <div class="tab-highlight">
-                <div class="highlight-card">
-                  <div class="highlight-num">R$ 80K</div>
-                  <div class="highlight-label">crédito mínimo</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">220x</div>
-                  <div class="highlight-label">mensalidades</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">FGTS</div>
-                  <div class="highlight-label">como lance</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="tab-investimento" role="tabpanel">
-            <div class="tab-content">
-              <div class="tab-text">
-                <span class="tab-eyebrow">CONSÓRCIO COMO INVESTIMENTO</span>
-                <h3>Mais lucro, menos riscos. Grupos personalizados e cotas exclusivas.</h3>
-                <p>Para quem já tem patrimônio e quer crescer de forma estruturada. Estratégias de lance embutido e compra de múltiplas cotas para contemplação acelerada com rentabilidade acima da renda fixa.</p>
-                <ul class="tab-list">
-                  <li><span class="check">✓</span> Crédito a partir de R$ 80.000</li>
-                  <li><span class="check">✓</span> Grupos e cotas exclusivos</li>
-                  <li><span class="check">✓</span> Estratégia de lance embutido</li>
-                  <li><span class="check">✓</span> Rentabilidade superior à renda fixa</li>
-                  <li><span class="check">✓</span> Consultoria de estratégia inclusa</li>
-                  <li><span class="check">✓</span> Sem risco de mercado</li>
-                </ul>
-                <button class="btn-gold" onclick="openModal('modal-simulacao')">Fale com um consultor</button>
-              </div>
-              <div class="tab-highlight">
-                <div class="highlight-card">
-                  <div class="highlight-num">+TIR</div>
-                  <div class="highlight-label">vs renda fixa</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">0%</div>
-                  <div class="highlight-label">de juros</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">1:1</div>
-                  <div class="highlight-label">consultoria</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="tab-pesados" role="tabpanel">
-            <div class="tab-content">
-              <div class="tab-text">
-                <span class="tab-eyebrow">CONSÓRCIO DE PESADOS</span>
-                <h3>Caminhões, ônibus, tratores e máquinas agrícolas.</h3>
-                <p>Para transportadoras, construtoras e produtores rurais que precisam renovar ou expandir a frota sem comprometer o fluxo de caixa com juros altos de financiamento.</p>
-                <ul class="tab-list">
-                  <li><span class="check">✓</span> Crédito a partir de R$ 50.000</li>
-                  <li><span class="check">✓</span> Até 140 mensalidades</li>
-                  <li><span class="check">✓</span> Caminhões e ônibus</li>
-                  <li><span class="check">✓</span> Tratores e máquinas agrícolas</li>
-                  <li><span class="check">✓</span> Meia parcela até contemplação</li>
-                  <li><span class="check">✓</span> Sem entrada obrigatória</li>
-                </ul>
-                <button class="btn-gold" onclick="openModal('modal-simulacao')">Fale com um consultor</button>
-              </div>
-              <div class="tab-highlight">
-                <div class="highlight-card">
-                  <div class="highlight-num">R$ 50K</div>
-                  <div class="highlight-label">crédito mínimo</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">140x</div>
-                  <div class="highlight-label">mensalidades</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">0%</div>
-                  <div class="highlight-label">de juros</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="tab-capital-giro" role="tabpanel">
-            <div class="tab-content">
-              <div class="tab-text">
-                <span class="tab-eyebrow">CAPITAL DE GIRO VIA GARANTIA REAL</span>
-                <h3>O crédito empresarial mais barato do Brasil — a partir de 0,89% ao mês.</h3>
-                <p>Sua empresa usa um imóvel quitado ou frota de veículos pesados como garantia e recebe capital de giro com taxa 3 a 5 vezes menor que o mercado convencional. Sem descapitalização antecipada — você só move recursos depois de receber o crédito.</p>
-                <ul class="tab-list">
-                  <li><span class="check">✓</span> Taxa a partir de 0,89% ao mês</li>
-                  <li><span class="check">✓</span> Prazo de liberação: 40 a 90 dias</li>
-                  <li><span class="check">✓</span> Garantia: imóvel ou frota quitada</li>
-                  <li><span class="check">✓</span> Crédito de R$ 300.000 a R$ 10.000.000</li>
-                  <li><span class="check">✓</span> Para construtoras, incorporadoras e transportadoras</li>
-                  <li><span class="check">✓</span> Entrega garantida em contrato</li>
-                </ul>
-                <button class="btn-gold" onclick="openModal('modal-whatsapp')">Solicitar análise gratuita</button>
-              </div>
-              <div class="tab-highlight">
-                <div class="highlight-card highlight-card-gold">
-                  <div class="highlight-num">0,89%</div>
-                  <div class="highlight-label">ao mês</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">90d</div>
-                  <div class="highlight-label">liberação</div>
-                </div>
-                <div class="highlight-card">
-                  <div class="highlight-num">R$ 10M</div>
-                  <div class="highlight-label">crédito máximo</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CAPITAL DE GIRO DESTAQUE ========== -->
-  <section class="cg-section" id="capital-giro">
-    <div class="container">
-      <div class="cg-inner">
-        <div class="cg-text">
-          <span class="eyebrow-light">DIFERENCIAL SOMMAR CAPITAL</span>
-          <h2>Para levantar R$ 1M, o modelo<br>convencional exige R$ 2M em caixa.</h2>
-          <p>O banco cobra 2 a 5% ao mês pra emprestar dinheiro pra sua empresa — enquanto a Selic está em 14,75%. A diferença entre esses dois números vai pro spread deles.</p>
-          <p>Existe uma modalidade de crédito com garantia real que custa a partir de <strong>0,89% ao mês</strong>, com prazo de até 240 meses. Ela existe há décadas. Só não é do interesse do banco te apresentar.</p>
-          <ul class="cg-list">
-            <li>
-              <span class="cg-num">01</span>
-              <div>
-                <strong>Você tem o ativo</strong>
-                <p>Imóvel quitado ou frota de pesados — a garantia que o banco exige mas não usa a seu favor.</p>
-              </div>
-            </li>
-            <li>
-              <span class="cg-num">02</span>
-              <div>
-                <strong>Nós estruturamos a operação</strong>
-                <p>Análise, documentação e gestão de toda a operação — você só assina e recebe.</p>
-              </div>
-            </li>
-            <li>
-              <span class="cg-num">03</span>
-              <div>
-                <strong>Crédito na conta em 40 a 90 dias</strong>
-                <p>Taxa a partir de 0,89% ao mês. Entrega garantida em contrato. Sem descapitalização antecipada.</p>
-              </div>
-            </li>
-          </ul>
-          <button class="btn-gold btn-lg" onclick="openModal('modal-whatsapp')">Solicitar análise gratuita</button>
-        </div>
-        <div class="cg-aside">
-          <div class="cg-card">
-            <div class="cg-card-rate">0,89%</div>
-            <div class="cg-card-label">ao mês</div>
-            <div class="cg-card-divider"></div>
-            <div class="cg-card-stat">
-              <span class="cg-stat-val">até R$ 10M</span>
-              <span class="cg-stat-label">em crédito</span>
-            </div>
-            <div class="cg-card-stat">
-              <span class="cg-stat-val">40–90 dias</span>
-              <span class="cg-stat-label">para liberar</span>
-            </div>
-            <div class="cg-card-stat">
-              <span class="cg-stat-val">imóvel ou frota</span>
-              <span class="cg-stat-label">como garantia</span>
-            </div>
-            <button class="btn-gold btn-full" onclick="openModal('modal-whatsapp')">Pré-análise gratuita em 24h</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== BENEFITS ========== -->
-  <section class="benefits-section">
-    <div class="container">
-      <span class="eyebrow">POR QUE A SOMMAR CAPITAL</span>
-      <h2 class="section-title">A maneira mais inteligente<br>de alcançar seus objetivos</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M15 20l4 4 6-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h4>Sem juros</h4>
-          <p>Você paga apenas a taxa administrativa — sem IOF, sem juros compostos. O que você contrata é o que você paga.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="12" width="24" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M8 18h24" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M14 24h4M22 24h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h4>FGTS como lance</h4>
-          <p>Em consórcio de imóvel residencial, você usa o FGTS para ser contemplado mais rápido — sem tirar do próprio bolso.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="16" r="6" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h4>Consultoria gratuita</h4>
-          <p>Gabriel te atende pessoalmente — analisa seu caso, calcula CET real e te apresenta a melhor estratégia. Sem pressão.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 12h20M10 18h16M10 24h12M10 30h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h4>Planos variados</h4>
-          <p>De 50 a 240 meses, com créditos de R$ 34.000 a R$ 10.000.000. Existe um plano para cada momento da sua vida.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 8v6M20 26v6M8 20h6M26 20h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="20" cy="20" r="3" fill="currentColor"/>
-            </svg>
-          </div>
-          <h4>Menor taxa do mercado</h4>
-          <p>Trabalhamos com a administradora que pratica as menores taxas administrativas. Você economiza do primeiro ao último mês.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 10v12l6 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="20" cy="22" r="14" stroke="currentColor" stroke-width="1.8"/>
-            </svg>
-          </div>
-          <h4>Meia parcela até contemplação</h4>
-          <p>Você paga metade enquanto ainda não foi contemplado. Isso libera caixa para quitar outras despesas ou investir o restante.</p>
-        </div>
-      </div>
-
-      <div class="benefits-highlight">
-        <strong>Pague apenas meia parcela todo mês até a contemplação. Sem juros!</strong>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SOBRE / HISTÓRIA ========== -->
-  <section class="about-section" id="sobre">
-    <div class="container">
-      <div class="about-inner">
-        <div class="about-text">
-          <span class="eyebrow">QUEM SOMOS</span>
-          <h2>A Sommar Capital<br>é feita por quem<br>opera o mercado.</h2>
-          <p>Somos uma corretora autorizada <strong>Consórcio Magalu</strong> especializada em <strong>Cartas Contempladas e Planejamento Financeiro</strong> — ajudando clientes a adquirir patrimônio de forma inteligente e sem pagar juros.</p>
-          <p>Gabriel fundou a Sommar Capital com um objetivo claro: oferecer o que os grandes bancos e corretoras genéricas não entregam — <strong>análise técnica real, estratégia patrimonial personalizada e atendimento direto</strong>, sem intermediários desnecessários.</p>
-          <p>Cada cliente recebe uma análise de CET (Custo Efetivo Total) auditável antes de qualquer contrato. Você sabe exatamente quanto vai pagar e quanto vai economizar comparado a um financiamento convencional.</p>
-          <div class="about-certs">
-            <div class="cert-badge">
-              <span class="cert-name">Magalu Consórcios</span>
-              <span class="cert-desc">Corretora autorizada</span>
-            </div>
-            <div class="cert-badge">
-              <span class="cert-name">Banco Central do Brasil</span>
-              <span class="cert-desc">Garantia regulatória</span>
-            </div>
-            <div class="cert-badge">
-              <span class="cert-name">ABAC</span>
-              <span class="cert-desc">Associação Brasileira de Administradoras de Consórcios</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <div class="stat-num">8M+</div>
-            <div class="stat-label">consorciados Magalu</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">0%</div>
-            <div class="stat-label">de juros em todos os planos</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">24h</div>
-            <div class="stat-label">para pré-análise gratuita</div>
-          </div>
-          <div class="stat-card stat-card-gold">
-            <div class="stat-num">0,89%</div>
-            <div class="stat-label">taxa mínima capital de giro</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== DEPOIMENTOS ========== -->
-  <section class="testimonials-section">
-    <div class="container">
-      <span class="eyebrow">CLIENTES SOMMAR CAPITAL</span>
-      <h2 class="section-title">Veja quem já foi contemplado</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-avatar">M</div>
-          <div class="testimonial-body">
-            <p>"A Sommar Capital foi muito transparente desde o início — desde o processo de conhecer o produto até a contemplação. O Gabriel explicou tudo, calculou o CET real e eu sabia exatamente quanto ia economizar comparado ao financiamento."</p>
-            <div class="testimonial-author">
-              <strong>Marcos Oliveira</strong>
-              <span>Consórcio de imóvel — R$ 280.000</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-avatar">R</div>
-          <div class="testimonial-body">
-            <p>"Usava o FGTS há anos sem saber que podia usar como lance no consórcio. Com a estratégia do Gabriel fui contemplado no 8º mês. No financiamento convencional teria pago quase R$ 90.000 a mais de juros."</p>
-            <div class="testimonial-author">
-              <strong>Renata Souza</strong>
-              <span>Consórcio de imóvel — R$ 180.000</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-avatar">J</div>
-          <div class="testimonial-body">
-            <p>"Queria renovar a frota sem comprometer o caixa da empresa. O consórcio de pesados foi a solução perfeita. Meia parcela no início, sem juros, sem burocracia pesada. A equipe cuidou de tudo."</p>
-            <div class="testimonial-author">
-              <strong>Jefferson Almeida</strong>
-              <span>Consórcio de caminhões — R$ 420.000</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card testimonial-card-highlight">
-          <div class="testimonial-avatar testimonial-avatar-gold">A</div>
-          <div class="testimonial-body">
-            <p>"Levantei R$ 1,2M de capital de giro usando meu imóvel como garantia. Taxa de 1,1% ao mês — o banco me oferecia 3,8%. A operação foi estruturada em 60 dias, tudo formalizado em contrato. Não há como comparar."</p>
-            <div class="testimonial-author">
-              <strong>Ana Ferreira</strong>
-              <span>Capital de Giro — R$ 1.200.000</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FAQ ========== -->
-  <section class="faq-section">
-    <div class="container">
-      <span class="eyebrow">DÚVIDAS FREQUENTES</span>
-      <h2 class="section-title">Respostas para<br>quem está começando</h2>
-      <div class="faq-list">
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Como funciona o consórcio?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Um grupo de pessoas contribui mensalmente para um fundo comum. A cada mês, um ou mais participantes são contemplados — via sorteio ou lance — e recebem a carta de crédito para comprar o bem contratado. Todos os participantes são contemplados ao longo do plano. Você paga apenas a taxa administrativa, sem juros.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            O que é contemplação e como acontece?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Contemplação é quando você recebe a carta de crédito. Acontece de duas formas: <strong>sorteio mensal</strong> (aleatório, acontece em toda assembleia) ou <strong>lance</strong> (você oferece um percentual do crédito para ser contemplado mais cedo — quem oferecer mais é contemplado). Após a contemplação, você continua pagando as mensalidades até o final do plano.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Posso usar o FGTS como lance?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Sim — em consórcio de imóvel residencial, você pode usar o FGTS como lance para aumentar significativamente suas chances de contemplação antecipada. Existem regras específicas (o imóvel precisa ser para moradia própria, você não pode ter outro imóvel no mesmo município, entre outras). Nosso consultor verifica sua elegibilidade sem custo.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            O que é capital de giro via garantia real?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>É uma operação estruturada onde sua empresa recebe crédito usando um imóvel quitado ou frota de veículos pesados como garantia. A taxa começa em 0,89% ao mês — 3 a 5 vezes menor que as linhas de crédito empresarial convencionais. O prazo de liberação é de 40 a 90 dias e a entrega é garantida em contrato. Ideal para construtoras, incorporadoras e transportadoras com ativos imobilizados.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Se eu cancelar o consórcio, perco o dinheiro?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>Não completamente. Ao cancelar, você entra numa fila especial de desistentes e recebe seu saldo de volta — descontadas a taxa administrativa proporcional e eventuais multas previstas em contrato. O valor é devolvido quando você é sorteado nessa fila, o que pode levar alguns meses. Por isso, antes de considerar o cancelamento, fale conosco — existem alternativas como cessão de cota e transferência.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Qual a diferença entre consórcio e financiamento?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>No financiamento, você paga juros que podem chegar a 2–3% ao mês — em 10 anos, você pode pagar o dobro do valor do bem. No consórcio, você paga apenas a taxa administrativa (em média 0,10–0,15% ao mês) e não tem garantia de contemplação imediata. O consórcio é o caminho mais barato para quem tem planejamento e não tem urgência imediata.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            Como funciona o lance e como calcular o melhor lance?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>O lance é um valor adicional que você oferece na assembleia mensal. Quem oferecer o maior percentual do crédito é contemplado. Existem dois tipos: <strong>lance livre</strong> (você define o valor) e <strong>lance embutido</strong> (o valor do lance é descontado do próprio crédito, sem necessidade de dinheiro extra). A estratégia ideal depende do saldo do grupo e do seu momento — nosso consultor calcula isso gratuitamente.</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="faq-cta">
-        <button class="btn-gold btn-lg" onclick="openModal('modal-simulacao')">Simule o seu consórcio agora!</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== BLOG ========== -->
-  <section class="blog-section">
-    <div class="container">
-      <span class="eyebrow">CONTEÚDO E EDUCAÇÃO</span>
-      <h2 class="section-title">Fique por dentro do<br>universo do consórcio</h2>
-      <div class="blog-grid">
-
-        <article class="blog-card">
-          <div class="blog-card-top">
-            <span class="blog-tag">MANUAL DO CONSÓRCIO</span>
-          </div>
-          <div class="blog-card-body">
-            <h3><a href="blog/como-funciona-consorcio.html">Como funciona o consórcio — guia completo para iniciantes</a></h3>
-            <p>Tudo o que você precisa saber antes de contratar: grupos, assembleias, contemplação, lance e taxa administrativa explicados de forma simples.</p>
-            <a href="blog/como-funciona-consorcio.html" class="blog-read-more">Ler artigo →</a>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-card-top">
-            <span class="blog-tag">PARA INVESTIR</span>
-          </div>
-          <div class="blog-card-body">
-            <h3><a href="blog/consorcio-imoveis-investimento.html">Consórcio de imóveis como instrumento de investimento</a></h3>
-            <p>Como usar o consórcio para construir patrimônio imobiliário com rentabilidade superior à renda fixa e sem os riscos do mercado de ações.</p>
-            <a href="blog/consorcio-imoveis-investimento.html" class="blog-read-more">Ler artigo →</a>
-          </div>
-        </article>
-
-        <article class="blog-card blog-card-highlight">
-          <div class="blog-card-top">
-            <span class="blog-tag blog-tag-gold">CAPITAL DE GIRO</span>
-          </div>
-          <div class="blog-card-body">
-            <h3><a href="blog/capital-de-giro-garantia-real.html">Capital de giro via garantia real: o crédito mais barato do Brasil</a></h3>
-            <p>Enquanto os bancos cobram 3% ao mês, existe uma operação estruturada que entrega crédito empresarial a partir de 0,89% ao mês. Entenda como funciona.</p>
-            <a href="blog/capital-de-giro-garantia-real.html" class="blog-read-more">Ler artigo →</a>
-          </div>
-        </article>
-
-      </div>
-      <div class="blog-cta">
-        <a href="blog/" class="btn-outline-navy">Ver mais conteúdos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== INSTAGRAM ========== -->
-  <section class="instagram-section">
-    <div class="container">
-      <div class="instagram-inner">
-        <div class="instagram-text">
-          <span class="eyebrow-light">INSTAGRAM</span>
-          <h2>Acompanhe nosso conteúdo<br>sobre consórcio e patrimônio</h2>
-          <p>Publicamos semanalmente sobre estratégias de consórcio, planejamento financeiro e casos reais de contemplação.</p>
-          <a href="https://instagram.com/sommarcapital" target="_blank" rel="noopener" class="btn-gold btn-lg instagram-cta">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-right:8px">
-              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-            </svg>
-            Seguir @sommarcapital
-          </a>
-        </div>
-        <div class="instagram-handle">
-          <div class="instagram-profile">
-            <div class="instagram-avatar">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="64" height="64">
-                <defs>
-                  <pattern id="hg-ig" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-                    <line x1="0" y1="0" x2="0" y2="4" stroke="#C9A558" stroke-width="1.2"/>
-                  </pattern>
-                  <clipPath id="vc-ig">
-                    <path d="M 18 5.5 A 12.5 12.5 0 0 1 18 28.5 A 12.5 12.5 0 0 1 18 5.5 Z"/>
-                  </clipPath>
-                </defs>
-                <circle cx="12" cy="17" r="12.5" fill="none" stroke="#C9A558" stroke-width="1.4"/>
-                <circle cx="24" cy="17" r="12.5" fill="none" stroke="#C9A558" stroke-width="1.4"/>
-                <rect x="0" y="0" width="36" height="36" fill="url(#hg-ig)" clip-path="url(#vc-ig)"/>
-              </svg>
-            </div>
-            <div class="instagram-info">
-              <strong>@sommarcapital</strong>
-              <span>SOMMAR CAPITAL | Consórcios &amp; Investimentos</span>
-            </div>
-          </div>
-          <div class="instagram-stats">
-            <div class="ig-stat"><span class="ig-stat-num">35</span><span class="ig-stat-label">posts</span></div>
-            <div class="ig-stat"><span class="ig-stat-num">351</span><span class="ig-stat-label">seguidores</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA BANNER ========== -->
-  <section class="cta-banner" id="contato">
-    <div class="container">
-      <div class="cta-banner-inner">
-        <div class="cta-banner-text">
-          <h2>Pronto para começar?</h2>
-          <p>Pré-análise gratuita em até 24h. Sem compromisso.</p>
-        </div>
-        <div class="cta-banner-btns">
-          <button class="btn-gold btn-lg" onclick="openModal('modal-simulacao')">Fazer simulação</button>
-          <button class="btn-outline-white" onclick="openModal('modal-whatsapp')">Falar com Gabriel</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-
-        <div class="footer-brand">
-          <a href="/" class="logo logo-footer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 40" width="140" height="33">
-              <defs>
-                <pattern id="hg-f" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
-                  <line x1="0" y1="0" x2="0" y2="4" stroke="#C9A558" stroke-width="1.2"/>
-                </pattern>
-                <clipPath id="vc-f">
-                  <path d="M 18 5.5 A 12.5 12.5 0 0 1 18 28.5 A 12.5 12.5 0 0 1 18 5.5 Z"/>
-                </clipPath>
-              </defs>
-              <circle cx="12" cy="17" r="12.5" fill="none" stroke="#C9A558" stroke-width="1.4"/>
-              <circle cx="24" cy="17" r="12.5" fill="none" stroke="#C9A558" stroke-width="1.4"/>
-              <rect x="0" y="0" width="36" height="36" fill="url(#hg-f)" clip-path="url(#vc-f)"/>
-              <text x="44" y="14" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" letter-spacing="3.5" fill="#C9A558">SOMMAR</text>
-              <text x="44" y="28" font-family="Montserrat,sans-serif" font-size="10" font-weight="400" letter-spacing="3.5" fill="#C9A558">CAPITAL</text>
-            </svg>
-          </a>
-          <p class="footer-tagline">Estratégias inteligentes para aquisição de patrimônio.</p>
-          <div class="footer-social">
-            <a href="https://instagram.com/sommarcapital" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-              </svg>
-            </a>
-            <a href="#" aria-label="WhatsApp" onclick="openModal('modal-whatsapp'); return false;">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <path d="M20.52 3.48A11.95 11.95 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.1 1.5 5.82L0 24l6.35-1.67A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52z" fill="currentColor" opacity=".15"/>
-                <path d="M17.5 14.86c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.8-1.67-2.1-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.97-1.38.24-.67.24-1.25.17-1.37-.07-.12-.27-.2-.57-.35z" fill="currentColor"/>
-              </svg>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M7 10v7M7 7v.5M11 17v-4a2 2 0 014 0v4M11 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <h5>Produtos</h5>
-          <ul>
-            <li><a href="#automoveis">Consórcio de automóveis</a></li>
-            <li><a href="#imoveis">Consórcio de imóveis</a></li>
-            <li><a href="#investimento">Consórcio investimento</a></li>
-            <li><a href="#contempladas">Cartas contempladas</a></li>
-            <li><a href="#capital-giro">Capital de Giro</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links">
-          <h5>Institucional</h5>
-          <ul>
-            <li><a href="#sobre">Sobre nós</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#">Política de privacidade</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links">
-          <h5>Blog</h5>
-          <ul>
-            <li><a href="blog/como-funciona-consorcio.html">Manual do consórcio</a></li>
-            <li><a href="blog/consorcio-imoveis-investimento.html">Para investir</a></li>
-            <li><a href="blog/capital-de-giro-garantia-real.html">Capital de giro</a></li>
-            <li><a href="blog/">Ver todos</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-legal">
-          <p>Sommar Soluções Financeiras LTDA — CNPJ: 63.799.145/0001-14</p>
-          <p>(83) 9.9902-5887 &nbsp;·&nbsp; atendimento@sommarcapital.com.br</p>
-        </div>
-        <div class="footer-certs">
-          <span class="footer-cert">Autorizada Magalu Consórcios</span>
-          <span class="footer-cert">Garantia Banco Central do Brasil</span>
-          <span class="footer-cert">Associada ABAC</span>
-        </div>
-        <p class="footer-copy">© 2026 Sommar Capital ® Todos os direitos reservados.</p>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- ========== FLOAT WHATSAPP ========== -->
-  <button class="float-whatsapp" onclick="openModal('modal-whatsapp')" aria-label="Falar pelo WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white">
-      <path d="M20.52 3.48A11.95 11.95 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.1 1.5 5.82L0 24l6.35-1.67A11.96 11.96 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52zM12 22c-1.85 0-3.63-.5-5.18-1.38l-.37-.22-3.77.99 1.01-3.68-.24-.38A10 10 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.5-7.14c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.8-1.67-2.1-.17-.3-.02-.46.13-.6.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.97-1.38.24-.67.24-1.25.17-1.37-.07-.12-.27-.2-.57-.35z"/>
-    </svg>
-  </button>
-
-  <!-- ========== MODAL WHATSAPP ========== -->
-  <div class="modal-overlay" id="modal-whatsapp" role="dialog" aria-modal="true" aria-label="Fale com um especialista">
-    <div class="modal">
-      <button class="modal-close" onclick="closeModal('modal-whatsapp')" aria-label="Fechar">✕</button>
-      <div class="modal-header">
-        <h3>Fale com um especialista</h3>
-        <p>Gabriel responde em até 24h. Pré-análise gratuita, sem compromisso.</p>
-      </div>
-      <form class="modal-form" id="form-whatsapp" onsubmit="submitWhatsapp(event)">
-        <div class="form-group">
-          <label for="wa-nome">Nome completo</label>
-          <input type="text" id="wa-nome" name="nome" placeholder="Seu nome" required>
-        </div>
-        <div class="form-group">
-          <label for="wa-telefone">Telefone / WhatsApp</label>
-          <input type="tel" id="wa-telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
-        </div>
-        <div class="form-group">
-          <label for="wa-interesse">Interesse</label>
-          <select id="wa-interesse" name="interesse">
-            <option value="">Selecione...</option>
-            <option value="Automóveis">Consórcio de automóveis</option>
-            <option value="Imóveis">Consórcio de imóveis</option>
-            <option value="Investimento">Consórcio investimento</option>
-            <option value="Contempladas">Cartas contempladas</option>
-            <option value="Capital de Giro">Capital de Giro empresarial</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-gold btn-full btn-lg">Chamar no WhatsApp</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ========== MODAL SIMULAÇÃO ========== -->
-  <div class="modal-overlay" id="modal-simulacao" role="dialog" aria-modal="true" aria-label="Fazer simulação">
-    <div class="modal">
-      <button class="modal-close" onclick="closeModal('modal-simulacao')" aria-label="Fechar">✕</button>
-      <div class="modal-steps" id="sim-steps">
-
-        <div class="modal-step active" id="sim-step-1">
-          <div class="modal-header">
-            <div class="modal-step-indicator">Passo 1 de 3</div>
-            <h3>Qual tipo de consórcio?</h3>
-          </div>
-          <div class="sim-options">
-            <button class="sim-option" onclick="simNext('Imóvel')">
-              <span class="sim-option-icon">🏠</span>
-              Imóvel
-            </button>
-            <button class="sim-option" onclick="simNext('Automóvel')">
-              <span class="sim-option-icon">🚗</span>
-              Automóvel
-            </button>
-            <button class="sim-option" onclick="simNext('Investimento')">
-              <span class="sim-option-icon">📈</span>
-              Investimento
-            </button>
-            <button class="sim-option" onclick="simNext('Capital de Giro')">
-              <span class="sim-option-icon">💼</span>
-              Capital de Giro
-            </button>
-          </div>
-        </div>
-
-        <div class="modal-step" id="sim-step-2">
-          <div class="modal-header">
-            <div class="modal-step-indicator">Passo 2 de 3</div>
-            <h3>Qual o crédito ideal?</h3>
-            <p>Escolha o valor aproximado que você precisa</p>
-          </div>
-          <div class="sim-options sim-options-values">
-            <button class="sim-option" onclick="simNextVal('Até R$ 100.000')">Até R$ 100K</button>
-            <button class="sim-option" onclick="simNextVal('R$ 100K a R$ 300K')">R$ 100K – R$ 300K</button>
-            <button class="sim-option" onclick="simNextVal('R$ 300K a R$ 800K')">R$ 300K – R$ 800K</button>
-            <button class="sim-option" onclick="simNextVal('Acima de R$ 800K')">Acima de R$ 800K</button>
-          </div>
-        </div>
-
-        <div class="modal-step" id="sim-step-3">
-          <div class="modal-header">
-            <div class="modal-step-indicator">Passo 3 de 3</div>
-            <h3>Seus dados</h3>
-            <p>Gabriel entra em contato com a simulação completa</p>
-          </div>
-          <form class="modal-form" id="form-simulacao" onsubmit="submitSimulacao(event)">
-            <div class="form-group">
-              <label for="sim-nome">Nome completo</label>
-              <input type="text" id="sim-nome" name="nome" placeholder="Seu nome" required>
-            </div>
-            <div class="form-group">
-              <label for="sim-email">E-mail</label>
-              <input type="email" id="sim-email" name="email" placeholder="seu@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="sim-telefone">Telefone / WhatsApp</label>
-              <input type="tel" id="sim-telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
-            </div>
-            <button type="submit" class="btn-gold btn-full btn-lg">Receber simulação →</button>
-          </form>
-        </div>
-
-        <div class="modal-step" id="sim-step-sucesso">
-          <div class="modal-success">
-            <div class="success-icon">✓</div>
-            <h3>Solicitação enviada!</h3>
-            <p>Gabriel vai te chamar no WhatsApp com a simulação completa em até 24h.</p>
-            <button class="btn-gold" onclick="closeModal('modal-simulacao')">Fechar</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="modal-backdrop" id="modal-backdrop" onclick="closeAllModals()"></div>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+SOMMAR
+CAPITAL
+Início
+Produtos ▾
+Automóveis
+Imóveis
+Investimento
+Contempladas
+Capital de Giro
+Sobre nós
+Blog
+Contato
+WhatsApp Fazer simulação
+
+Consórcio de veículos
+Comprar um
+carro novo?
+Sem juros. Sem entrada obrigatória.
+Meia parcela até a contemplação.
+
+Fazer simulação Ver produtos
+Consórcio de imóveis
+Sair do
+aluguel?
+Do apartamento próprio ao imóvel comercial.
+Sem juros, com uso de FGTS como lance.
+
+Fazer simulação Saiba mais
+Estratégia patrimonial
+Alavancar
+seu patrimônio?
+Consórcio como instrumento de investimento:
+previsível, auditável e sem risco de mercado.
+
+Fazer simulação Saiba mais
+← →
+  
+DO QUE VOCÊ PRECISA AGORA?
+
+Comprar um carro novo! →
+Sair do aluguel! →
+Alavancar meu patrimônio! →
+Crédito para minha empresa! →
+Escolha o consórcio
+certo para você
+Consórcio de automóveis
+Carros, motos e elétricos — novos ou semi-novos. O caminho mais inteligente para trocar de veículo.
+
+Crédito a partir de R$ 34.000
+Até 140 mensalidades
+Meia parcela até contemplação
+Sem juros — só taxa administrativa
+Fazer simulação
+Consórcio de imóveis
+Apartamento, casa, terreno, imóvel comercial ou reforma — sem juros e com possibilidade de usar FGTS.
+
+Crédito a partir de R$ 80.000
+Até 220 mensalidades
+FGTS como lance (residencial)
+Sem juros — só taxa administrativa
+Fazer simulação
+Consórcio para investimentos
+Grupos personalizados, cotas exclusivas e estratégias de contemplação acelerada para quem quer multiplicar patrimônio.
+
+Crédito a partir de R$ 80.000
+Grupos e cotas exclusivos
+Estratégia de lance embutido
+Consultoria de estratégia inclusa
+Fazer simulação
+ESPECIALIDADE
+Cartas contempladas
+Crédito imediato — sem esperar contemplação. Para quem precisa do recurso agora mas quer fugir dos juros do financiamento.
+
+Crédito disponível em 5–15 dias úteis
+Imóvel ou automóvel
+De R$ 50.000 a R$ 2.000.000+
+Taxa de cessão + taxa administrativa
+Ver contempladas
+Consórcio sob medida
+para cada objetivo
+Veículos Imóveis Investimento Pesados Capital de Giro ✦
+CONSÓRCIO DE VEÍCULOS
+Para você comprar carros ou motos, novos ou semi-novos.
+Sem juros, sem entrada obrigatória. Você paga meia parcela até ser contemplado — depois o valor ajusta para a parcela cheia, com amortização de 50% do saldo devedor.
+
+✓ Crédito a partir de R$ 34.000
+✓ Até 140 mensalidades
+✓ Meia parcela até contemplação
+✓ Carros, motos, elétricos
+✓ Novos e semi-novos
+✓ Menor taxa administrativa do mercado
+Fale com um consultor
+R$ 34K
+crédito mínimo
+140x
+mensalidades
+0%
+de juros
+CONSÓRCIO DE IMÓVEIS
+Apartamento, casa, terreno, imóvel comercial ou reforma.
+O produto mais flexível do mercado imobiliário. Use FGTS como lance para ser contemplado mais rápido, ou aguarde o sorteio sem pagar juros em nenhum momento.
+
+✓ Crédito a partir de R$ 80.000
+✓ Até 240 mensalidades
+✓ FGTS como lance (residencial)
+✓ Meia parcela até contemplação
+✓ Terreno, construção, reforma
+✓ Imóvel comercial e galpão
+Fale com um consultor
+R$ 80K
+crédito mínimo
+240x
+mensalidades
+FGTS
+como lance
+CONSÓRCIO COMO INVESTIMENTO
+Mais lucro, menos riscos. Grupos personalizados e cotas exclusivas.
+Para quem já tem patrimônio e quer crescer de forma estruturada. Estratégias de lance embutido e compra de múltiplas cotas para contemplação acelerada com rentabilidade acima da renda fixa.
+
+✓ Crédito a partir de R$ 80.000
+✓ Grupos e cotas exclusivos
+✓ Estratégia de lance embutido
+✓ Rentabilidade superior à renda fixa
+✓ Consultoria de estratégia inclusa
+✓ Sem risco de mercado
+Fale com um consultor
++TIR
+vs renda fixa
+0%
+de juros
+1:1
+consultoria
+CONSÓRCIO DE PESADOS
+Caminhões, ônibus, tratores e máquinas agrícolas.
+Para transportadoras, construtoras e produtores rurais que precisam renovar ou expandir a frota sem comprometer o fluxo de caixa com juros altos de financiamento.
+
+✓ Crédito a partir de R$ 50.000
+✓ Até 140 mensalidades
+✓ Caminhões e ônibus
+✓ Tratores e máquinas agrícolas
+✓ Meia parcela até contemplação
+✓ Sem entrada obrigatória
+Fale com um consultor
+R$ 50K
+crédito mínimo
+140x
+mensalidades
+0%
+de juros
+CAPITAL DE GIRO VIA GARANTIA REAL
+O crédito empresarial mais barato do Brasil — a partir de 0,89% ao mês.
+Sua empresa usa um imóvel quitado ou frota de veículos pesados como garantia e recebe capital de giro com taxa 3 a 5 vezes menor que o mercado convencional. Sem descapitalização antecipada — você só move recursos depois de receber o crédito.
+
+✓ Taxa a partir de 0,89% ao mês
+✓ Prazo de liberação: 40 a 90 dias
+✓ Garantia: imóvel ou frota quitada
+✓ Crédito de R$ 300.000 a R$ 10.000.000
+✓ Para construtoras, incorporadoras e transportadoras
+✓ Entrega garantida em contrato
+Solicitar análise gratuita
+0,89%
+ao mês
+90d
+liberação
+R$ 10M
+crédito máximo
+Para levantar R$ 1M, o modelo
+convencional exige R$ 2M em caixa.
+O banco cobra 2 a 5% ao mês pra emprestar dinheiro pra sua empresa — enquanto a Selic está em 14,75%. A diferença entre esses dois números vai pro spread deles.
+
+Existe uma modalidade de crédito com garantia real que custa a partir de 0,89% ao mês, com prazo de até 240 meses. Ela existe há décadas. Só não é do interesse do banco te apresentar.
+
+01
+Você tem o ativo
+Imóvel quitado ou frota de pesados — a garantia que o banco exige mas não usa a seu favor.
+
+02
+Nós estruturamos a operação
+Análise, documentação e gestão de toda a operação — você só assina e recebe.
+
+03
+Crédito na conta em 40 a 90 dias
+Taxa a partir de 0,89% ao mês. Entrega garantida em contrato. Sem descapitalização antecipada.
+
+Solicitar análise gratuita
+0,89%
+ao mês
+até R$ 10M em crédito
+40–90 dias para liberar
+imóvel ou frota como garantia
+Pré-análise gratuita em 24h
+A maneira mais inteligente
+de alcançar seus objetivos
+Sem juros
+Você paga apenas a taxa administrativa — sem IOF, sem juros compostos. O que você contrata é o que você paga.
+
+FGTS como lance
+Em consórcio de imóvel residencial, você usa o FGTS para ser contemplado mais rápido — sem tirar do próprio bolso.
+
+Consultoria gratuita
+Gabriel te atende pessoalmente — analisa seu caso, calcula CET real e te apresenta a melhor estratégia. Sem pressão.
+
+Planos variados
+De 50 a 240 meses, com créditos de R$ 34.000 a R$ 10.000.000. Existe um plano para cada momento da sua vida.
+
+Menor taxa do mercado
+Trabalhamos com a administradora que pratica as menores taxas administrativas. Você economiza do primeiro ao último mês.
+
+Meia parcela até contemplação
+Você paga metade enquanto ainda não foi contemplado. Isso libera caixa para quitar outras despesas ou investir o restante.
+
+Pague apenas meia parcela todo mês até a contemplação. Sem juros!
+A Sommar Capital
+é feita por quem
+opera o mercado.
+Somos uma corretora autorizada Consórcio Magalu especializada em Cartas Contempladas e Planejamento Financeiro — ajudando clientes a adquirir patrimônio de forma inteligente e sem pagar juros.
+
+Gabriel fundou a Sommar Capital com um objetivo claro: oferecer o que os grandes bancos e corretoras genéricas não entregam — análise técnica real, estratégia patrimonial personalizada e atendimento direto, sem intermediários desnecessários.
+
+Cada cliente recebe uma análise de CET (Custo Efetivo Total) auditável antes de qualquer contrato. Você sabe exatamente quanto vai pagar e quanto vai economizar comparado a um financiamento convencional.
+
+Magalu Consórcios Corretora autorizada
+Banco Central do Brasil Garantia regulatória
+ABAC Associação Brasileira de Administradoras de Consórcios
+8M+
+consorciados Magalu
+0%
+de juros em todos os planos
+24h
+para pré-análise gratuita
+0,89%
+taxa mínima capital de giro
+Veja quem já foi contemplado
+M
+"A Sommar Capital foi muito transparente desde o início — desde o processo de conhecer o produto até a contemplação. O Gabriel explicou tudo, calculou o CET real e eu sabia exatamente quanto ia economizar comparado ao financiamento."
+
+Marcos Oliveira Consórcio de imóvel — R$ 280.000
+R
+"Usava o FGTS há anos sem saber que podia usar como lance no consórcio. Com a estratégia do Gabriel fui contemplado no 8º mês. No financiamento convencional teria pago quase R$ 90.000 a mais de juros."
+
+Renata Souza Consórcio de imóvel — R$ 180.000
+J
+"Queria renovar a frota sem comprometer o caixa da empresa. O consórcio de pesados foi a solução perfeita. Meia parcela no início, sem juros, sem burocracia pesada. A equipe cuidou de tudo."
+
+Jefferson Almeida Consórcio de caminhões — R$ 420.000
+A
+"Levantei R$ 1,2M de capital de giro usando meu imóvel como garantia. Taxa de 1,1% ao mês — o banco me oferecia 3,8%. A operação foi estruturada em 60 dias, tudo formalizado em contrato. Não há como comparar."
+
+Ana Ferreira Capital de Giro — R$ 1.200.000
+Respostas para
+quem está começando
+Como funciona o consórcio? +
+Um grupo de pessoas contribui mensalmente para um fundo comum. A cada mês, um ou mais participantes são contemplados — via sorteio ou lance — e recebem a carta de crédito para comprar o bem contratado. Todos os participantes são contemplados ao longo do plano. Você paga apenas a taxa administrativa, sem juros.
+
+O que é contemplação e como acontece? +
+Contemplação é quando você recebe a carta de crédito. Acontece de duas formas: sorteio mensal (aleatório, acontece em toda assembleia) ou lance (você oferece um percentual do crédito para ser contemplado mais cedo — quem oferecer mais é contemplado). Após a contemplação, você continua pagando as mensalidades até o final do plano.
+
+Posso usar o FGTS como lance? +
+Sim — em consórcio de imóvel residencial, você pode usar o FGTS como lance para aumentar significativamente suas chances de contemplação antecipada. Existem regras específicas (o imóvel precisa ser para moradia própria, você não pode ter outro imóvel no mesmo município, entre outras). Nosso consultor verifica sua elegibilidade sem custo.
+
+O que é capital de giro via garantia real? +
+É uma operação estruturada onde sua empresa recebe crédito usando um imóvel quitado ou frota de veículos pesados como garantia. A taxa começa em 0,89% ao mês — 3 a 5 vezes menor que as linhas de crédito empresarial convencionais. O prazo de liberação é de 40 a 90 dias e a entrega é garantida em contrato. Ideal para construtoras, incorporadoras e transportadoras com ativos imobilizados.
+
+Se eu cancelar o consórcio, perco o dinheiro? +
+Não completamente. Ao cancelar, você entra numa fila especial de desistentes e recebe seu saldo de volta — descontadas a taxa administrativa proporcional e eventuais multas previstas em contrato. O valor é devolvido quando você é sorteado nessa fila, o que pode levar alguns meses. Por isso, antes de considerar o cancelamento, fale conosco — existem alternativas como cessão de cota e transferência.
+
+Qual a diferença entre consórcio e financiamento? +
+No financiamento, você paga juros que podem chegar a 2–3% ao mês — em 10 anos, você pode pagar o dobro do valor do bem. No consórcio, você paga apenas a taxa administrativa (em média 0,10–0,15% ao mês) e não tem garantia de contemplação imediata. O consórcio é o caminho mais barato para quem tem planejamento e não tem urgência imediata.
+
+Como funciona o lance e como calcular o melhor lance? +
+O lance é um valor adicional que você oferece na assembleia mensal. Quem oferecer o maior percentual do crédito é contemplado. Existem dois tipos: lance livre (você define o valor) e lance embutido (o valor do lance é descontado do próprio crédito, sem necessidade de dinheiro extra). A estratégia ideal depende do saldo do grupo e do seu momento — nosso consultor calcula isso gratuitamente.
+
+Simule o seu consórcio agora!
+Fique por dentro do
+universo do consórcio
+MANUAL DO CONSÓRCIO
+Como funciona o consórcio — guia completo para iniciantes
+Tudo o que você precisa saber antes de contratar: grupos, assembleias, contemplação, lance e taxa administrativa explicados de forma simples.
+
+Ler artigo →
+PARA INVESTIR
+Consórcio de imóveis como instrumento de investimento
+Como usar o consórcio para construir patrimônio imobiliário com rentabilidade superior à renda fixa e sem os riscos do mercado de ações.
+
+Ler artigo →
+CAPITAL DE GIRO
+Capital de giro via garantia real: o crédito mais barato do Brasil
+Enquanto os bancos cobram 3% ao mês, existe uma operação estruturada que entrega crédito empresarial a partir de 0,89% ao mês. Entenda como funciona.
+
+Ler artigo →
+Ver mais conteúdos
+INSTAGRAM
+Acompanhe nosso conteúdo
+sobre consórcio e patrimônio
+Publicamos semanalmente sobre estratégias de consórcio, planejamento financeiro e casos reais de contemplação.
+
+ Seguir @sommarcapital
+@sommarcapital SOMMAR CAPITAL | Consórcios & Investimentos
+35posts
+351seguidores
+Pronto para começar?
+Pré-análise gratuita em até 24h. Sem compromisso.
+
+Fazer simulação Falar com Gabriel
+SOMMAR
+CAPITAL
+Estratégias inteligentes para aquisição de patrimônio.
+
+  
+Produtos
+Consórcio de automóveis
+Consórcio de imóveis
+Consórcio investimento
+Cartas contempladas
+Capital de Giro
+Institucional
+Sobre nós
+Contato
+FAQ
+Política de privacidade
+Blog
+Manual do consórcio
+Para investir
+Capital de giro
+Ver todos
+Sommar Soluções Financeiras LTDA — CNPJ: 63.799.145/0001-14
+
+(83) 9.9902-5887  ·  atendimento@sommarcapital.com.br
+
+Autorizada Magalu Consórcios Garantia Banco Central do Brasil Associada ABAC
+© 2026 Sommar Capital ® Todos os direitos reservados.
+
+
+✕
+Fale com um especialista
+Gabriel responde em até 24h. Pré-análise gratuita, sem compromisso.
+
+Nome completo 
+Seu nome
+Telefone / WhatsApp 
+(XX) XXXXX-XXXX
+Interesse 
+Selecione...
+Chamar no WhatsApp
+✕
+Passo 1 de 3
+Qual tipo de consórcio?
+🏠 Imóvel 🚗 Automóvel 📈 Investimento 💼 Capital de Giro
+Passo 2 de 3
+Qual o crédito ideal?
+Escolha o valor aproximado que você precisa
+
+Até R$ 100K R$ 100K – R$ 300K R$ 300K – R$ 800K Acima de R$ 800K
+Passo 3 de 3
+Seus dados
+Gabriel entra em contato com a simulação completa
+
+Nome completo 
+Seu nome
+E-mail 
+seu@email.com
+Telefone / WhatsApp 
+(XX) XXXXX-XXXX
+Receber simulação →
+✓
+Solicitação enviada!
+Gabriel vai te chamar no WhatsApp com a simulação completa em até 24h.
+
+Fechar
