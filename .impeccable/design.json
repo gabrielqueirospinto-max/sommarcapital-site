@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-02T00:00:00Z",
+  "title": "Design System: Sommar Capital",
+  "extensions": {
+    "colorMeta": {
+      "navy-deep":   { "role": "primary",  "displayName": "Slate Profundo",    "canonical": "oklch(22% 0.07 258)", "tonalRamp": ["#060a10","#0d1424","#1a2535","#273347","#3d5173","#5a6d90","#8097b5","#bfcedd"] },
+      "navy":        { "role": "primary",  "displayName": "Azul Credencial",   "canonical": "oklch(37% 0.07 258)", "tonalRamp": ["#0a1220","#1a2535","#2c3d55","#3d5173","#5a6d90","#7d90b0","#aab8cc","#dde5ef"] },
+      "navy-dark":   { "role": "primary",  "displayName": "Azul Intermediário","canonical": "oklch(30% 0.07 258)", "tonalRamp": ["#0d1424","#1a2535","#2c3d55","#3d5173","#5a6d90","#7d90b0","#aab8cc","#dde5ef"] },
+      "gold":        { "role": "secondary","displayName": "Dourado Brasão",    "canonical": "oklch(72% 0.12 73)",  "tonalRamp": ["#3d2500","#5a3a05","#7a5515","#a07830","#c9a558","#d9c080","#e8d4a0","#f8f0de"] },
+      "gold-dark":   { "role": "secondary","displayName": "Dourado Desgastado","canonical": "oklch(60% 0.12 73)",  "tonalRamp": ["#2a1800","#3d2500","#5a3a05","#7a5515","#a07830","#c9a558","#d9c080","#e8d4a0"] },
+      "gold-light":  { "role": "secondary","displayName": "Dourado Suave",     "canonical": "oklch(82% 0.09 73)",  "tonalRamp": ["#5a3a05","#7a5515","#a07830","#c9a558","#d9c080","#e8d4a0","#f3eacc","#faf5e8"] },
+      "offwhite":    { "role": "neutral",  "displayName": "Offwhite Fria",     "canonical": "oklch(95% 0.005 258)","tonalRamp": ["#d4dce8","#dde5ef","#e5ecf4","#edf2f7","#f0f2f5","#f3f6f8","#f7f9fb","#fcfdfe"] },
+      "offwhite-dk": { "role": "neutral",  "displayName": "Cinza Divisor",     "canonical": "oklch(91% 0.007 258)","tonalRamp": ["#bfcedd","#ccd8e4","#d9e1ea","#e2e6ec","#eaeff4","#f0f2f5","#f5f7fa","#fafbfc"] },
+      "white":       { "role": "neutral",  "displayName": "Branco Limpo",      "canonical": "oklch(100% 0 0)",     "tonalRamp": ["#d0d8e4","#dde5ef","#e8edf4","#f0f2f5","#f5f7fa","#f8fafc","#fafbfd","#ffffff"] },
+      "text":        { "role": "neutral",  "displayName": "Tinta Profunda",    "canonical": "oklch(17% 0.04 262)", "tonalRamp": ["#0a0b12","#12141e","#1a1a2e","#2a2a40","#4a4a5a","#6b6b7e","#9898a8","#c8c8d4"] },
+      "text-mid":    { "role": "neutral",  "displayName": "Tinta Média",       "canonical": "oklch(36% 0.025 262)","tonalRamp": ["#1a1a2e","#2a2a40","#3a3a50","#4a4a5a","#6b6b7e","#9898a8","#bbbbc8","#e0e0e8"] },
+      "text-light":  { "role": "neutral",  "displayName": "Tinta Suave",       "canonical": "oklch(50% 0.02 262)", "tonalRamp": ["#2a2a40","#4a4a5a","#5a5a6e","#6b6b7e","#8c8ca0","#a8a8b8","#c8c8d4","#e8e8f0"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Hero headlines. Peso máximo, tracking apertado. Máximo 8 palavras." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de seção em Libre Baskerville. O consultor que conhece a história por trás do número." },
+      "title":    { "displayName": "Title",    "purpose": "Subtítulos dentro de sections — tabs, card headings. Peso 800 sem recorrer ao serif." },
+      "body":     { "displayName": "Body",     "purpose": "Texto corrido, parágrafos, descrições. 16px em sections principais, 14px em cards." },
+      "label":    { "displayName": "Label",    "purpose": "Eyebrows, badges, tags. Máximo uma ocorrência por seção." }
+    },
+    "shadows": [
+      { "name": "ambient",  "value": "0 2px 8px rgba(61,81,115,0.08)",  "purpose": "Cards em repouso. Sempre presente — separa surface do background." },
+      { "name": "lifted",   "value": "0 6px 24px rgba(61,81,115,0.12)", "purpose": "Hover em cards interativos e dropdowns." },
+      { "name": "elevated", "value": "0 16px 48px rgba(61,81,115,0.14)","purpose": "Modais e overlays. Topo da pilha." }
+    ],
+    "motion": [
+      { "name": "standard",  "value": "0.24s ease",                          "purpose": "Transição padrão para todos os estados de UI." },
+      { "name": "carousel",  "value": "0.6s cubic-bezier(0.4, 0, 0.2, 1)",   "purpose": "Transição do hero carousel." },
+      { "name": "modal-in",  "value": "opacity + translateY(12px→0) 0.24s ease","purpose": "Entrada de modal — funcional, não dramático." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "1024px", "notes": "Grid de produtos muda para 2 colunas; layouts side-by-side colapsam." },
+      { "name": "mobile", "value": "768px",  "notes": "Nav colapsa para hambúrguer; grids para 1 coluna; hero arrow oculto." },
+      { "name": "small",  "value": "600px",  "notes": "Comparison banner e needs-grid ajustes menores." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal. Dourado sobre navy. Reservado para ações de conversão: simulação e WhatsApp.",
+      "html": "<button class=\"ds-btn-primary\">Fazer simulação</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; background: #C9A558; color: #1A2535; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; border: none; border-radius: 6px; cursor: pointer; transition: background 0.24s ease, transform 0.24s ease; white-space: nowrap; } .ds-btn-primary:hover { background: #A07830; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #C9A558; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button (Gold)",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "CTA secundário sobre fundo claro. Borda dourada, hover preenche com gold.",
+      "html": "<button class=\"ds-btn-outline\">WhatsApp</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 11px 26px; background: transparent; color: #C9A558; border: 1.5px solid #C9A558; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.05em; border-radius: 6px; cursor: pointer; transition: background 0.24s ease, color 0.24s ease; } .ds-btn-outline:hover { background: #C9A558; color: #1A2535; } .ds-btn-outline:focus-visible { outline: 2px solid #C9A558; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Uso exclusivo sobre fundos escuros (hero, seções navy). Nunca sobre branco.",
+      "html": "<button class=\"ds-btn-ghost\">Ver produtos</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; padding: 13px 28px; background: transparent; color: rgba(255,255,255,0.85); border: 1.5px solid rgba(255,255,255,0.3); font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.05em; border-radius: 6px; cursor: pointer; transition: border-color 0.24s ease, color 0.24s ease; } .ds-btn-ghost:hover { border-color: rgba(255,255,255,0.7); color: #fff; } .ds-btn-ghost:focus-visible { outline: 2px solid rgba(255,255,255,0.6); outline-offset: 3px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "card-product",
+      "description": "Card de produto com ícone, título, descrição e lista de features. Border gold no hover.",
+      "html": "<div class=\"ds-product-card\"><div class=\"ds-product-header\"><div class=\"ds-product-icon\"><svg viewBox=\"0 0 40 40\" fill=\"none\" width=\"22\" height=\"22\"><path d=\"M5 18L20 7l15 11v17a2 2 0 01-2 2H7a2 2 0 01-2-2V18z\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 34V24h10v10\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></div><h3 class=\"ds-product-title\">Consórcio de imóveis</h3></div><p class=\"ds-product-desc\">Apartamento, casa, terreno ou imóvel comercial — sem juros e com possibilidade de usar FGTS.</p><ul class=\"ds-product-features\"><li>Crédito a partir de R$ 80.000</li><li>Até 220 mensalidades</li><li>FGTS como lance (residencial)</li></ul><button class=\"ds-btn-primary\" style=\"width:100%\">Fazer simulação</button></div>",
+      "css": ".ds-product-card { padding: 32px 28px; border: 1px solid #E2E6EC; border-radius: 6px; background: #fff; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 2px 8px rgba(61,81,115,0.08); transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease; } .ds-product-card:hover { border-color: #C9A558; box-shadow: 0 6px 24px rgba(61,81,115,0.12); transform: translateY(-2px); } .ds-product-header { display: flex; align-items: flex-start; gap: 14px; } .ds-product-icon { width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #F0F2F5; border-radius: 4px; color: #3D5173; } .ds-product-title { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; color: #1A1A2E; } .ds-product-desc { font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.6; color: #4A4A5A; flex: 1; } .ds-product-features { list-style: none; display: flex; flex-direction: column; gap: 8px; padding: 0; margin: 0; } .ds-product-features li { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 500; color: #4A4A5A; padding-left: 16px; position: relative; } .ds-product-features li::before { content: '✓'; position: absolute; left: 0; color: #C9A558; font-weight: 700; } .ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; background: #C9A558; color: #1A2535; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; border: none; border-radius: 6px; cursor: pointer; transition: background 0.24s ease, transform 0.24s ease; } .ds-btn-primary:hover { background: #A07830; transform: translateY(-1px); }"
+    },
+    {
+      "name": "Form Input",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Input de formulário. Border navy no focus. Placeholder com contraste adequado.",
+      "html": "<div class=\"ds-form-group\"><label class=\"ds-form-label\">Nome completo</label><input class=\"ds-input\" type=\"text\" placeholder=\"Seu nome\"></div>",
+      "css": ".ds-form-group { display: flex; flex-direction: column; gap: 6px; } .ds-form-label { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: #1A1A2E; } .ds-input { padding: 12px 14px; border: 1.5px solid #E2E6EC; border-radius: 4px; font-family: 'Montserrat', sans-serif; font-size: 14px; color: #1A1A2E; background: #fff; transition: border-color 0.24s ease; outline: none; } .ds-input:focus { border-color: #3D5173; } .ds-input::placeholder { color: #6B6B7E; }"
+    },
+    {
+      "name": "Navigation Header",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Header fixo. Navy-deep, borda-dourada quase invisível, nav links brancos, CTAs gold.",
+      "html": "<header class=\"ds-header\"><div class=\"ds-header-inner\"><span class=\"ds-logo-placeholder\">SOMMAR CAPITAL</span><nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#\">Produtos</a><a class=\"ds-nav-link\" href=\"#\">Sobre nós</a><a class=\"ds-nav-link\" href=\"#\">Blog</a></nav><div class=\"ds-header-actions\"><button class=\"ds-btn-outline\">WhatsApp</button><button class=\"ds-btn-primary\">Fazer simulação</button></div></div></header>",
+      "css": ".ds-header { background: #1A2535; border-bottom: 1px solid rgba(201,165,88,0.12); padding: 0 40px; } .ds-header-inner { display: flex; align-items: center; height: 68px; gap: 32px; } .ds-logo-placeholder { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: #C9A558; flex-shrink: 0; } .ds-nav { flex: 1; display: flex; gap: 4px; } .ds-nav-link { padding: 8px 14px; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; color: rgba(255,255,255,0.8); border-radius: 4px; text-decoration: none; transition: color 0.24s ease, background 0.24s ease; } .ds-nav-link:hover { color: #fff; background: rgba(255,255,255,0.08); } .ds-header-actions { display: flex; gap: 10px; flex-shrink: 0; } .ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 11px 26px; background: transparent; color: #C9A558; border: 1.5px solid #C9A558; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.05em; border-radius: 6px; cursor: pointer; transition: background 0.24s ease, color 0.24s ease; } .ds-btn-outline:hover { background: #C9A558; color: #1A2535; } .ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; background: #C9A558; color: #1A2535; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; border: none; border-radius: 6px; cursor: pointer; transition: background 0.24s ease, transform 0.24s ease; } .ds-btn-primary:hover { background: #A07830; transform: translateY(-1px); }"
+    },
+    {
+      "name": "Hero Tag",
+      "kind": "chip",
+      "description": "Badge de categoria no hero. Pill dourado com fundo translúcido. Único por slide.",
+      "html": "<span class=\"ds-hero-tag\">Consórcio de imóveis</span>",
+      "css": ".ds-hero-tag { display: inline-block; padding: 5px 14px; background: rgba(201,165,88,0.15); border: 1px solid rgba(201,165,88,0.3); border-radius: 100px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: #C9A558; }"
+    },
+    {
+      "name": "Stat Card",
+      "kind": "card",
+      "description": "Card de estatística com número grande e label. Variante gold para dado-destaque.",
+      "html": "<div class=\"ds-stat-card\"><div class=\"ds-stat-num\">8M+</div><div class=\"ds-stat-label\">consorciados Magalu</div></div>",
+      "css": ".ds-stat-card { background: #F0F2F5; border-radius: 6px; padding: 24px 28px; text-align: center; border: 1px solid #E2E6EC; } .ds-stat-num { font-family: 'Montserrat', sans-serif; font-size: 36px; font-weight: 900; letter-spacing: -0.03em; color: #3D5173; line-height: 1; } .ds-stat-label { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: #6B6B7E; text-transform: uppercase; margin-top: 6px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Carta Assinada",
+    "overview": "A Carta Assinada é a metáfora que governa cada decisão visual: um documento financeiro bem preenchido, onde tudo está no lugar certo, cada campo tem sua função, e nada foi inserido por decoração. A letra de crédito que o cliente assina para finalmente ter o que planejou. O design não exibe; certifica.\n\nA identidade parte de dois polos visuais em tensão produtiva: o navy profundo (#1A2535 a #3D5173) como âncora de credibilidade e seriedade, e o dourado brassado (#C9A558) como o único elemento que brilha — reservado para ação e dado-chave. A tipografia mistura Montserrat pesadíssimo (900) para impacto e Libre Baskerville para ancoragem serifa nas headlines de seção.\n\nEste sistema rejeita layouts burocráticos de banco genérico, poluição visual de corretora barata, e eyebrows uppercase em toda seção como andaime automático.",
+    "keyCharacteristics": [
+      "Navy profundo como estrutura, dourado como sinal, não decoração",
+      "Sombras suaves sempre presentes nos cards, nunca pesadas",
+      "Serif (Libre Baskerville) reservado para headlines de seção",
+      "Transição padrão de .24s ease — funcional, nunca dramático",
+      "Número específico beats adjetivo: design construído em torno de dados concretos",
+      "Alternância de backgrounds como ritmo, não como ornamento"
+    ],
+    "rules": [
+      { "name": "A Regra do Sinal Dourado", "body": "O gold (#C9A558) aparece em ≤3 pontos por seção: o CTA, o dado-mais-importante, e eventuais marcadores. Mais que isso é ruído.", "section": "colors" },
+      { "name": "A Regra da Seção Escura", "body": "Sections em navy-deep existem para momentos de peso. Nunca duas sections escuras consecutivas.", "section": "colors" },
+      { "name": "A Regra do Âncora Serif", "body": "Libre Baskerville aparece somente em headlines de seção e statements de posicionamento. Nunca em UI, labels, ou corpo de card.", "section": "typography" },
+      { "name": "A Regra do Número em Bold", "body": "Qualquer dado numérico que fundamenta o argumento recebe font-weight ≥700 e destaque dourado (em dark) ou peso tipográfico (em light).", "section": "typography" },
+      { "name": "A Regra do Navy-Sombra", "body": "Todas as sombras são derivadas de rgba(61,81,115, opacity). Proibido: rgba(0,0,0,x). Sombra preta é sem marca; sombra navy é Sommar.", "section": "elevation" }
+    ],
+    "dos": [
+      "Usar gold no máximo em 3 pontos por seção: CTA, dado-chave, marcador.",
+      "Usar Libre Baskerville exclusivamente para headlines de seção (h2-level).",
+      "Garantir contraste ≥4.5:1 em todo texto de corpo.",
+      "Usar rgba(61,81,115, opacity) como base para todas as sombras.",
+      "Alternar backgrounds branco/offwhite/navy para ritmo de seção.",
+      "Apresentar números com font-weight ≥700.",
+      "Usar .hl (gold italic) para a pergunta-chave do headline — máximo uma vez."
+    ],
+    "donts": [
+      "Não usar border-left maior que 1px como acento colorido em cards.",
+      "Não usar gradient text (background-clip: text + gradient).",
+      "Não colocar eyebrow uppercase em cada seção como scaffolding automático.",
+      "Não criar grids de cards idênticos sem diferenciação estrutural.",
+      "Não parecer banco tradicional genérico (paleta azul/verde padrão, layout burocrático).",
+      "Não parecer corretora de seguros barata (visual poluído, múltiplos banners competindo).",
+      "Não usar sombras pretas (rgba(0,0,0,x)) — apenas sombras em navy.",
+      "Não usar glassmorphism como padrão decorativo.",
+      "Não usar all-caps em corpo de texto ou parágrafos.",
+      "Não usar offwhite warm-tinted (beige, areia). O sistema usa #F0F2F5 — levemente azulada."
+    ]
+  }
+}
