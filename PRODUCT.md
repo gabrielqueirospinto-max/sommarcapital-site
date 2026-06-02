@@ -22,15 +22,15 @@ O site existe para gerar leads qualificados que agendem uma consulta gratuita co
 
 ## Brand Personality
 
-**Especialista, transparente, estratégico.**
+**Próximo, humano, transparente.**
 
-Especialista: conhece o mercado por dentro, calcula CET real antes de qualquer contrato, explica lance embutido, FGTS como lance, garantia real — sem simplificar demais.
+Próximo: o Gabriel atende diretamente. Sem intermediários, sem atendente de call center, sem promessas vagas. A sensação é de falar com alguém que já resolveu esse problema antes e quer resolver o seu.
 
-Transparente: mostra os números. Não "economize muito" mas "R$ 90.000 a menos de juros em 10 anos". O cliente sabe exatamente o que vai pagar e o que vai economizar antes de assinar.
+Humano: o produto financeiro é complexo, mas a conversa não precisa ser. Linguagem simples, tom de conselheiro — não de vendedor. A consultoria gratuita é o produto antes do produto.
 
-Estratégico: não vende produto, constrói patrimônio. Pensa no longo prazo do cliente, não na comissão de hoje.
+Transparente: mostra os números. Não "economize muito" mas "R$ 90.000 a menos de juros em 10 anos". O cliente sabe exatamente o que vai pagar e o que vai economizar antes de assinar qualquer coisa.
 
-Tom de voz: direto, confiante, sem jargão desnecessário. Fala de igual para igual com quem entende de dinheiro. Educativo sem ser condescendente.
+Tom de voz: direto, sem jargão desnecessário, como um amigo que entende do assunto. Específico, nunca genérico. Educativo sem ser condescendente.
 
 ## Anti-references
 
