@@ -235,14 +235,88 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   sections.forEach(s => observer.observe(s));
 })();
 
+// ---- STAGGER INDEX ----
+// Sets CSS --i on children of card grids so transition-delay staggers them.
+(function () {
+  [
+    ['.needs-grid',       '.need-card'],
+    ['.products-grid',    '.product-card'],
+    ['.benefits-list',    '.benefit-item'],
+    ['.testimonials-grid','.testimonial-card'],
+    ['.blog-grid',        '.blog-card'],
+    ['.about-stats',      '.stat-card'],
+  ].forEach(([grid, child]) => {
+    document.querySelectorAll(grid + ' ' + child).forEach((el, i) => {
+      el.style.setProperty('--i', i);
+    });
+  });
+  document.querySelectorAll('.comparison-item').forEach((el, i) => {
+    el.style.setProperty('--i', i);
+  });
+})();
+
+// ---- COUNTUP ----
+// Animates stat numbers from 0 to their target value when scrolled into view.
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+
+  function parseNum(el) {
+    const text = el.textContent.trim();
+    const m = text.match(/^([^0-9]*)([0-9]+(?:[.,][0-9]+)?)([^0-9]*)$/);
+    if (!m) return null;
+    const [, prefix, rawNum, suffix] = m;
+    const target = parseFloat(rawNum.replace(',', '.'));
+    if (target <= 0) return null;
+    const decimals = (rawNum.split(/[.,]/)[1] || '').length;
+    const usesComma = rawNum.includes(',');
+    return { prefix, target, suffix, decimals, usesComma, original: text };
+  }
+
+  function runCountup(el, info) {
+    const dur = 1100;
+    const start = performance.now();
+    function frame(now) {
+      const t = Math.min((now - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - t, 4); // ease-out-quart
+      const val = info.target * ease;
+      let display;
+      if (info.decimals > 0) {
+        display = info.usesComma
+          ? val.toFixed(info.decimals).replace('.', ',')
+          : val.toFixed(info.decimals);
+      } else {
+        display = String(Math.round(val));
+      }
+      el.textContent = info.prefix + display + info.suffix;
+      if (t < 1) requestAnimationFrame(frame);
+      else el.textContent = info.original;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(({ isIntersecting, target: el }) => {
+      if (!isIntersecting) return;
+      const info = parseNum(el);
+      if (info) runCountup(el, info);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+
+  document.querySelectorAll('.stat-num, .cg-card-rate').forEach(el => {
+    if (parseNum(el)) io.observe(el);
+  });
+})();
+
 // ---- SCROLL REVEAL (entrada suave das seções) ----
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!('IntersectionObserver' in window)) return;
 
-  const selector = '.section-title, .product-card, .benefit-card, .testimonial-card, ' +
-    '.blog-card, .need-card, .cg-text, .cg-card, .about-text, .about-stats, ' +
-    '.cta-banner-inner, .instagram-inner';
+  const selector = '.section-title, .product-card, .benefit-item, .testimonial-card, ' +
+    '.blog-card, .need-card, .cg-text, .cg-card, .about-text, .stat-card, ' +
+    '.cta-banner-inner, .instagram-inner, .comparison-banner, .faq-item';
   const els = document.querySelectorAll(selector);
   if (!els.length) return;
 

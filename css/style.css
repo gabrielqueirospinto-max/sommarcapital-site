@@ -28,6 +28,8 @@
   --radius-sm:   4px;
   --t:           .24s ease;
   --container:   1200px;
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 html { scroll-behavior: smooth; }
@@ -134,6 +136,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: border-color var(--t), color var(--t);
 }
 .btn-ghost:hover { border-color: rgba(255,255,255,.7); color: var(--white); }
+
+/* ---- Button press micro-interaction ---- */
+.btn-gold:active { transform: translateY(0) scale(0.97); }
+.btn-outline:active,
+.btn-ghost:active,
+.btn-outline-navy:active,
+.btn-outline-white:active { transform: scale(0.97); }
+
+/* ============================================================
+   HERO ENTRANCE ANIMATION
+   Stagger on first slide only — other slides are off-screen.
+   ============================================================ */
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-slide[data-index="0"] .hero-tag        { animation: heroIn 600ms 80ms  var(--ease-out-expo) both; }
+  .hero-slide[data-index="0"] h1               { animation: heroIn 700ms 240ms var(--ease-out-expo) both; }
+  .hero-slide[data-index="0"] .hero-content > p { animation: heroIn 600ms 410ms var(--ease-out-expo) both; }
+  .hero-slide[data-index="0"] .hero-btns       { animation: heroIn 500ms 550ms var(--ease-out-expo) both; }
+}
 
 /* ---- Inline gold highlight (brand signature from Instagram) ---- */
 .hl {
@@ -650,7 +674,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .tab-panel { display: none; }
-.tab-panel.active { display: block; }
+.tab-panel.active {
+  display: block;
+  animation: tabFadeIn 260ms var(--ease-out-quart) both;
+}
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
 
 .tab-content {
   display: grid;
@@ -848,39 +879,46 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--white);
 }
 .benefits-section .eyebrow { text-align: center; }
-.benefits-grid {
+.benefits-list {
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 48px;
+  row-gap: 0;
   margin-bottom: 40px;
 }
-.benefit-card {
-  padding: 32px 28px;
-  border: 1px solid var(--offwhite-dk);
-  border-radius: var(--radius);
-  transition: border-color var(--t), box-shadow var(--t);
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--offwhite-dk);
 }
-.benefit-card:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
+.benefit-item:nth-child(odd):nth-last-child(1) { border-bottom: none; }
+.benefit-item:last-child { border-bottom: none; }
+.benefit-item:nth-child(5) { border-bottom: none; }
 .benefit-icon {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--offwhite);
   border-radius: var(--radius-sm);
   color: var(--navy);
-  margin-bottom: 18px;
 }
-.benefit-icon svg { width: 24px; height: 24px; }
-.benefit-card h4 {
-  font-size: 16px;
+.benefit-icon svg { width: 20px; height: 20px; }
+.benefit-body { flex: 1; }
+.benefit-body strong {
+  display: block;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: -.01em;
   color: var(--text);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
-.benefit-card p { font-size: 14px; line-height: 1.6; color: var(--text-mid); }
+.benefit-body p { font-size: 14px; line-height: 1.6; color: var(--text-mid); margin: 0; }
 
 .benefits-highlight {
   background: var(--navy);
@@ -1105,14 +1143,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--navy-deep);
 }
 .faq-answer {
-  display: none;
-  padding-bottom: 22px;
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 300ms var(--ease-out-quart);
 }
-.faq-answer.open { display: block; }
+.faq-answer > * { min-height: 0; }
+.faq-answer.open { grid-template-rows: 1fr; }
 .faq-answer p {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text-mid);
+  padding-bottom: 22px;
 }
 .faq-answer p strong { color: var(--text); font-weight: 600; }
 .faq-cta { text-align: center; }
@@ -1626,7 +1668,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .tab-content { padding: 28px 20px; }
   .tab-highlight { display: none; }
   .testimonials-grid { grid-template-columns: 1fr; }
-  .benefits-grid { grid-template-columns: 1fr; }
+  .benefits-list { grid-template-columns: 1fr; }
+  .benefit-item:nth-child(5) { border-bottom: 1px solid var(--offwhite-dk); }
   .blog-grid { grid-template-columns: 1fr; }
   .cta-banner-inner { flex-direction: column; text-align: center; }
   .cta-banner-text h2 { font-size: 26px; }
@@ -1647,18 +1690,42 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ============================================================
    SCROLL REVEAL (progressive enhancement)
-   Elements only hide once JS marks <html> as reveal-ready, so
-   content stays visible if JS is disabled or fails to load.
+   Content stays visible if JS is disabled.
+   Per-element easing + stagger via CSS --i custom property.
    ============================================================ */
 .reveal-ready .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .6s ease, transform .6s ease;
+  transform: translateY(20px);
+  transition: opacity .65s var(--ease-out-expo),
+              transform .65s var(--ease-out-expo);
+  transition-delay: calc(var(--i, 0) * 70ms);
   will-change: opacity, transform;
 }
 .reveal-ready .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Section headings travel slightly further */
+.reveal-ready .section-title.reveal {
+  transform: translateY(28px);
+  transition-duration: .75s;
+}
+
+/* Stat cards scale in addition to translateY */
+.reveal-ready .stat-card.reveal,
+.reveal-ready .cg-card.reveal {
+  transform: translateY(10px) scale(0.96);
+}
+.reveal-ready .stat-card.is-visible,
+.reveal-ready .cg-card.is-visible {
+  transform: none;
+}
+
+/* Stat numbers: tabular numerals prevent layout shift during countup */
+.stat-num,
+.cg-card-rate {
+  font-variant-numeric: tabular-nums;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1667,6 +1734,5 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
   }
-  /* Never hide content for users who prefer reduced motion */
   .reveal-ready .reveal { opacity: 1 !important; transform: none !important; }
 }
