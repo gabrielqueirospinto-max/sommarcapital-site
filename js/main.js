@@ -241,7 +241,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   [
     ['.needs-grid',       '.need-card'],
     ['.products-grid',    '.product-card'],
-    ['.benefits-list',    '.benefit-item'],
+    ['.how-steps',        '.how-step'],
+  ['.benefits-list',    '.benefit-item'],
     ['.testimonials-grid','.testimonial-card'],
     ['.blog-grid',        '.blog-card'],
     ['.about-stats',      '.stat-card'],
@@ -314,7 +315,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!('IntersectionObserver' in window)) return;
 
-  const selector = '.section-title, .product-card, .benefit-item, .testimonial-card, ' +
+  const selector = '.section-title, .product-card, .how-step, .benefit-item, .testimonial-card, ' +
     '.blog-card, .need-card, .cg-text, .cg-card, .about-text, .stat-card, ' +
     '.cta-banner-inner, .instagram-inner, .comparison-banner, .faq-item';
   const els = document.querySelectorAll(selector);
