@@ -335,3 +335,31 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
   els.forEach(el => io.observe(el));
 })();
+
+// ---- STICKY CTA BAR ----
+(function () {
+  const bar = document.getElementById('sticky-cta-bar');
+  const closeBtn = document.getElementById('sticky-cta-close');
+  if (!bar) return;
+
+  let dismissed = false;
+  const hero = document.getElementById('inicio');
+
+  function update() {
+    if (dismissed) return;
+    const threshold = hero ? hero.offsetHeight * 0.8 : 500;
+    const visible = window.scrollY > threshold;
+    bar.classList.toggle('is-visible', visible);
+    bar.setAttribute('aria-hidden', !visible);
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      dismissed = true;
+      bar.classList.remove('is-visible');
+      bar.setAttribute('aria-hidden', 'true');
+    });
+  }
+})();

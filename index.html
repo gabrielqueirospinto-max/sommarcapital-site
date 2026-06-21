@@ -181,7 +181,7 @@
 
       <div class="hero-slide" data-index="0">
         <div class="hero-bg hero-bg-1"></div>
-        <div class="container">
+        <div class="container hero-container-split">
           <div class="hero-content">
             <span class="hero-tag">Consórcio de veículos</span>
             <h1>Comprar um<br>carro novo <span class="hl">sem juros?</span></h1>
@@ -190,6 +190,12 @@
               <button class="btn-gold btn-lg" onclick="openModal('modal-simulacao')">Fazer simulação</button>
               <a href="#produtos" class="btn-ghost">Ver produtos</a>
             </div>
+          </div>
+          <div class="hero-proof" aria-label="Destaque veículos">
+            <div class="hero-proof-val">½</div>
+            <div class="hero-proof-unit">da parcela</div>
+            <div class="hero-proof-label">você paga até ser contemplado</div>
+            <div class="hero-proof-badge">0% de juros</div>
           </div>
         </div>
       </div>
@@ -359,6 +365,11 @@
               </svg>
             </div>
             <h3>Consórcio de imóveis</h3>
+          </div>
+          <div class="product-price-badge" aria-label="Exemplo de parcela">
+            <span class="ppb-val">R$&nbsp;1.397</span>
+            <span class="ppb-unit">/mês</span>
+            <span class="ppb-note">exemplo: crédito R$ 280.000 · 240 meses · 0% juros</span>
           </div>
           <p>Apartamento, casa, terreno, imóvel comercial ou reforma. Sem juros e com possibilidade de usar FGTS.</p>
           <ul class="product-features">
@@ -868,6 +879,7 @@
         <div class="testimonial-card">
           <div class="testimonial-avatar">M</div>
           <div class="testimonial-body">
+            <span class="contemplado-badge">Contemplado ✓</span>
             <div class="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
             <p>"A Sommar Capital foi muito transparente desde o início — desde o processo de conhecer o produto até a contemplação. O Gabriel explicou tudo, calculou o CET real e eu sabia exatamente quanto ia economizar comparado ao financiamento."</p>
             <div class="testimonial-author">
@@ -879,6 +891,7 @@
         <div class="testimonial-card">
           <div class="testimonial-avatar">R</div>
           <div class="testimonial-body">
+            <span class="contemplado-badge">Contemplada ✓</span>
             <div class="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
             <p>"Usava o FGTS há anos sem saber que podia usar como lance no consórcio. Com a estratégia do Gabriel fui contemplado no 8º mês. No financiamento convencional teria pago quase R$ 90.000 a mais de juros."</p>
             <div class="testimonial-author">
@@ -890,6 +903,7 @@
         <div class="testimonial-card">
           <div class="testimonial-avatar">J</div>
           <div class="testimonial-body">
+            <span class="contemplado-badge">Contemplado ✓</span>
             <div class="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
             <p>"Queria renovar a frota sem comprometer o caixa da empresa. O consórcio de pesados foi a solução perfeita. Meia parcela no início, sem juros, sem burocracia pesada. A equipe cuidou de tudo."</p>
             <div class="testimonial-author">
@@ -901,6 +915,7 @@
         <div class="testimonial-card testimonial-card-highlight">
           <div class="testimonial-avatar testimonial-avatar-gold">A</div>
           <div class="testimonial-body">
+            <span class="contemplado-badge">Crédito liberado ✓</span>
             <div class="testimonial-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
             <p>"Levantei R$ 1,2M de capital de giro usando meu imóvel como garantia. Taxa de 1,1% ao mês — o banco me oferecia 3,8%. A operação foi estruturada em 60 dias, tudo formalizado em contrato. Não há como comparar."</p>
             <div class="testimonial-author">
@@ -1323,6 +1338,20 @@
   </div>
 
   <div class="modal-backdrop" id="modal-backdrop" onclick="closeAllModals()"></div>
+
+  <!-- ========== STICKY CTA BAR ========== -->
+  <div class="sticky-cta-bar" id="sticky-cta-bar" aria-hidden="true">
+    <div class="container">
+      <div class="sticky-cta-inner">
+        <div class="sticky-cta-text">
+          <strong>Simule seu consórcio gratuitamente</strong>
+          <span>Pré-análise em até 24h · Sem compromisso</span>
+        </div>
+        <button class="btn-gold" onclick="openModal('modal-simulacao')">Simular agora</button>
+        <button class="sticky-cta-close" id="sticky-cta-close" aria-label="Fechar barra">✕</button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
