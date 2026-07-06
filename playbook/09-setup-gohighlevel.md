@@ -1,5 +1,7 @@
 # 09 — Setup do GoHighLevel
 
+> **📘 Tutorial passo a passo disponível:** cada item deste checklist tem execução detalhada (clique a clique, com testes de validação e custos) na pasta [`ghl/`](ghl/00-roteiro-de-implantacao.md). Use este doc como visão geral/checklist e o tutorial como guia de execução — comece pelo [Roteiro de Implantação](ghl/00-roteiro-de-implantacao.md).
+
 Checklist de configuração da conta GHL da Sommar, na ordem de implantação. Marque conforme concluir. Objetivo: sair do "tudo no WhatsApp pessoal" para operação rastreada de ponta a ponta.
 
 ## Fase 1 — Fundação (semana 1)

@@ -26,6 +26,24 @@ Este playbook é o sistema de vendas da Sommar Capital: como um lead entra, como
 | [09 — Setup GoHighLevel](09-setup-gohighlevel.md) | Checklist de configuração: pipeline, campos, tags, automações e IA |
 | [10 — Escala](10-escala.md) | Roteiro de crescimento: quando e como contratar, treinar e especializar |
 
+## Tutorial GoHighLevel (passo a passo de execução)
+
+A pasta [`ghl/`](ghl/00-roteiro-de-implantacao.md) transforma o playbook em execução: implantação do GHL do zero (contratação → operação diária), em 6 semanas, com passos clique a clique, valores prontos para copiar/colar e teste de validação em cada módulo.
+
+| Módulo | Conteúdo |
+|---|---|
+| [00 — Roteiro de Implantação](ghl/00-roteiro-de-implantacao.md) | **Comece aqui:** cronograma de 6 semanas, dependências e orçamento mensal |
+| [01 — Contratação e Conta](ghl/01-contratacao-e-conta.md) | Escolha do plano, criação da conta/subconta, usuários e permissões |
+| [02 — Fundação Técnica](ghl/02-fundacao-tecnica.md) | E-mail autenticado (SPF/DKIM/DMARC), domínio e telefonia |
+| [03 — WhatsApp](ghl/03-whatsapp.md) | Conexão oficial do número, Coexistence, templates e custos Meta |
+| [04 — CRM e Pipeline](ghl/04-crm-pipeline.md) | Pipeline de 8 etapas, campos customizados, tags e smart lists |
+| [05 — Calendário](ghl/05-calendario.md) | Agendamento do Closer, sync Google e política anti no-show |
+| [06 — Workflows](ghl/06-workflows.md) | As 7 automações construídas e testadas passo a passo |
+| [07 — Conversation AI](ghl/07-conversation-ai.md) | Chatbot de triagem: base de conhecimento, persona e handoff |
+| [08 — Voice AI](ghl/08-voice-ai.md) | Agente de voz em pt-BR: confirmação de agenda e reativação |
+| [09 — Dashboard](ghl/09-dashboard.md) | KPIs do funil em widgets + rotina de leitura |
+| [10 — Operação Diária](ghl/10-operacao-diaria.md) | Rotina de SDR, Closer e gestor dentro da ferramenta |
+
 ## Contexto do negócio
 
 - **Empresa:** Sommar Capital (Sommar Soluções Financeiras LTDA) — corretora autorizada Consórcio Magalu, João Pessoa/PB, atendimento 100% remoto (Brasil inteiro).
