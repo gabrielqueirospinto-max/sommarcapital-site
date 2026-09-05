@@ -132,9 +132,20 @@ function openModal(id) {
   const modal = document.getElementById(id);
   const backdrop = document.getElementById('modal-backdrop');
   if (!modal || !backdrop) return;
+  if (id === 'modal-simulacao') resetSimulation();
   modal.classList.add('open');
   backdrop.classList.add('open');
   document.body.style.overflow = 'hidden';
+}
+
+function resetSimulation() {
+  simTipo = '';
+  simValor = '';
+  document.querySelectorAll('#modal-simulacao .modal-step').forEach(step => step.classList.remove('active'));
+  const firstStep = document.getElementById('sim-step-1');
+  const form = document.getElementById('form-simulacao');
+  if (firstStep) firstStep.classList.add('active');
+  if (form) form.reset();
 }
 
 function closeModal(id) {
@@ -158,6 +169,12 @@ function closeAllModals() {
 // Close on Escape
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllModals(); });
 
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) closeModal(overlay.id);
+  });
+});
+
 // ---- SIMULATION STEPS ----
 let simTipo = '';
 let simValor = '';
@@ -177,18 +194,18 @@ function simNextVal(valor) {
 function submitSimulacao(e) {
   e.preventDefault();
   const nome = document.getElementById('sim-nome').value;
+  const email = document.getElementById('sim-email').value;
   const telefone = document.getElementById('sim-telefone').value;
   const interesse = `${simTipo} — ${simValor}`;
   const msg = encodeURIComponent(
-    `Olá Gabriel! Gostaria de uma simulação.\n\nNome: ${nome}\nInteresse: ${interesse}\nTelefone: ${telefone}`
+    `Olá Gabriel! Gostaria de uma simulação.\n\nNome: ${nome}\nE-mail: ${email}\nInteresse: ${interesse}\nTelefone: ${telefone}`
   );
   // Show success first
   document.getElementById('sim-step-3').classList.remove('active');
   document.getElementById('sim-step-sucesso').classList.add('active');
-  // Open WhatsApp after short delay
-  setTimeout(() => {
-    window.open(`https://wa.me/5583999025887?text=${msg}`, '_blank');
-  }, 600);
+  // Keep this synchronous with the submit event to avoid mobile popup blockers.
+  const whatsappUrl = `https://wa.me/5583999025887?text=${msg}`;
+  window.location.assign(whatsappUrl);
 }
 
 function submitWhatsapp(e) {
@@ -199,7 +216,7 @@ function submitWhatsapp(e) {
   const msg = encodeURIComponent(
     `Olá Gabriel! Quero saber mais sobre ${interesse}.\n\nNome: ${nome}\nTelefone: ${telefone}`
   );
-  window.open(`https://wa.me/5583999025887?text=${msg}`, '_blank');
+  window.location.assign(`https://wa.me/5583999025887?text=${msg}`);
 }
 
 // ---- SMOOTH SCROLL (links de âncora) ----

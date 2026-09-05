@@ -10,14 +10,14 @@
   <meta property="og:url" content="https://sommarcapital.com.br/">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Sommar Capital">
-  <meta property="og:image" content="https://sommarcapital.com.br/og-image.jpg">
+  <meta property="og:image" content="https://sommarcapital.com.br/ogimage.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Sommar Capital — Estratégias inteligentes para aquisição de patrimônio">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sommar Capital | Consórcios &amp; Investimentos">
   <meta name="twitter:description" content="Estratégias inteligentes para aquisição de patrimônio, sem pagar juros. Cartas contempladas, consórcio e capital de giro.">
-  <meta name="twitter:image" content="https://sommarcapital.com.br/og-image.jpg">
+  <meta name="twitter:image" content="https://sommarcapital.com.br/ogimage.jpg">
   <meta name="theme-color" content="#1A2535">
   <meta name="keywords" content="consórcio, carta contemplada, consórcio de imóveis, consórcio de automóveis, capital de giro, crédito com garantia real, planejamento financeiro, Magalu consórcio, João Pessoa, Paraíba">
   <link rel="canonical" href="https://sommarcapital.com.br/">
@@ -1196,15 +1196,15 @@
           <form class="modal-form" id="form-simulacao" onsubmit="submitSimulacao(event)">
             <div class="form-group">
               <label for="sim-nome">Nome completo</label>
-              <input type="text" id="sim-nome" name="nome" placeholder="Seu nome" required>
+              <input type="text" id="sim-nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
             </div>
             <div class="form-group">
               <label for="sim-email">E-mail</label>
-              <input type="email" id="sim-email" name="email" placeholder="seu@email.com" required>
+              <input type="email" id="sim-email" name="email" placeholder="seu@email.com" autocomplete="email" inputmode="email" required>
             </div>
             <div class="form-group">
               <label for="sim-telefone">Telefone / WhatsApp</label>
-              <input type="tel" id="sim-telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+              <input type="tel" id="sim-telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" autocomplete="tel" inputmode="tel" required>
             </div>
             <button type="submit" class="btn-gold btn-full btn-lg">Receber simulação →</button>
           </form>
@@ -1225,6 +1225,6 @@
 
   <div class="modal-backdrop" id="modal-backdrop" onclick="closeAllModals()"></div>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
